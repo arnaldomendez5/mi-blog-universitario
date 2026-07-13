@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog Universitario | Apuntes, Código y Proyectos</title>
+    <meta name="description" content="Espacio digital de aprendizaje, apuntes universitarios, desarrollo web y guías prácticas para estudiantes.">
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; background-color: #fafafa; }
+        header { text-align: center; padding: 30px 0; border-bottom: 2px solid #0066cc; margin-bottom: 30px; }
+        header h1 { margin: 0; color: #111; font-size: 2.2rem; }
+        header p { margin: 5px 0 0 0; color: #666; font-style: italic; }
+        nav { display: block; text-align: center; margin-bottom: 30px; background: #fff; padding: 10px; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        nav a { margin: 0 15px; text-decoration: none; color: #0066cc; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .grid-articulos { display: block; }
+        .tarjeta-articulo { background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-left: 5px solid #0066cc; }
+        .tarjeta-articulo h2 { margin: 0 0 10px 0; font-size: 1.5rem; }
+        .tarjeta-articulo h2 a { color: #111; text-decoration: none; }
+        .tarjeta-articulo h2 a:hover { color: #0066cc; }
+        .fecha { color: #888; font-size: 0.85rem; margin-bottom: 10px; }
+        .descripcion { color: #555; }
+        .leer-mas { display: inline-block; margin-top: 10px; color: #0066cc; text-decoration: none; font-weight: bold; }
+        .leer-mas:hover { text-decoration: underline; }
+        footer { margin-top: 60px; text-align: center; border-top: 1px solid #eee; padding-top: 20px; font-size: 0.9rem; color: #666; }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado del Sitio -->
+    <header>
+        <h1>Mi Blog Universitario</h1>
+        <p>Compartiendo conocimiento, código y técnicas de aprendizaje</p>
+    </header>
+
+    <!-- Menú de Navegación Fijo -->
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="privacidad.html">Privacidad</a>
+    </nav>
+
+    <!-- Listado de Artículos -->
+    <main>
+        <div class="grid-articulos">
+            
+            <!-- TARJETA DEL PRIMER ARTÍCULO -->
+            <article class="tarjeta-articulo">
+                <div class="fecha">Publicado el 13 de julio de 2026</div>
+                <h2><a href="entradas/tecnicas-de-estudio.html">Las 3 Técnicas de Estudio Científicamente Probadas para Exámenes Finales</a></h2>
+                <p class="descripcion">Descubre cómo mejorar tu rendimiento académico y afrontar tus materias con éxito usando métodos activos como el Active Recall y la organización del tiempo.</p>
+                <a href="entradas/tecnicas-de-estudio.html" class="leer-mas">Leer artículo completo →</a>
+            </article>
+
+            <!-- Cuando escribas un artículo nuevo, sólo copias el bloque <article> anterior aquí abajo -->
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Mi Blog Universitario. Desarrollado con código limpio y optimizado para alto rendimiento.</p>
+    </footer>
+
+</body>
+</html>
