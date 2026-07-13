@@ -20,7 +20,7 @@
             background-image: 
                 linear-gradient(#ffffff 2px, transparent 2px),
                 linear-gradient(90deg, #ffffff 2px, transparent 2px);
-            background-size: 40px 40px; /* Tamaño de la cuadrícula */
+            background-size: 40px 40px;
             background-position: -2px -2px;
         }
 
@@ -33,63 +33,136 @@
             margin-bottom: 20px; 
         }
 
-        header { text-align: center; border-bottom: 4px solid #0066cc; padding: 30px 20px; }
-        header h1 { margin: 0; color: #111; font-size: 2.2rem; }
-        header p { margin: 5px 0 0 0; color: #666; font-style: italic; }
-        
-        nav { display: block; text-align: center; }
-        nav a { margin: 0 15px; text-decoration: none; color: #0066cc; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        
-        .grid-articulos { display: block; }
-        .tarjeta-articulo { border-left: 5px solid #0066cc; }
-        .tarjeta-articulo h2 { margin: 0 0 10px 0; font-size: 1.5rem; }
-        .tarjeta-articulo h2 a { color: #111; text-decoration: none; }
-        .tarjeta-articulo h2 a:hover { color: #0066cc; }
-        
-        .fecha { color: #888; font-size: 0.85rem; margin-bottom: 10px; }
-        .descripcion { color: #555; }
-        .leer-mas { display: inline-block; margin-top: 10px; color: #0066cc; text-decoration: none; font-weight: bold; }
-        .leer-mas:hover { text-decoration: underline; }
-        
-        footer { text-align: center; font-size: 0.9rem; color: #666; margin-top: 40px; }
+        /* ===== NUEVOS ESTILOS PARA ARTÍCULOS DINÁMICOS ===== */
+        .post-preview {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .post-preview:last-child {
+            border-bottom: none;
+        }
+
+        .post-preview h2 {
+            margin: 0 0 5px 0;
+            font-size: 1.3rem;
+        }
+
+        .post-preview h2 a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .post-preview h2 a:hover {
+            text-decoration: underline;
+        }
+
+        .post-preview .resumen {
+            margin: 8px 0;
+            color: #555;
+        }
+
+        .post-preview .fecha {
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        .post-preview .etiquetas {
+            margin-top: 8px;
+        }
+
+        .post-preview .etiqueta {
+            display: inline-block;
+            background: #eef2f7;
+            padding: 2px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            color: #555;
+            margin-right: 5px;
+        }
+
+        /* Responsive para móvil */
+        @media (max-width: 600px) {
+            .post-preview h2 {
+                font-size: 1.1rem;
+            }
+        }
+        /* ===== FIN ESTILOS NUEVOS ===== */
+
+        /* Puedes mantener el resto de tus estilos personalizados aquí */
     </style>
 </head>
 <body>
 
-    <!-- Encabezado del Sitio -->
     <header>
-        <h1>Mi Blog Universitario</h1>
+        <h1>📘 Mi Blog Universitario</h1>
         <p>Compartiendo conocimiento, código y técnicas de aprendizaje</p>
     </header>
 
-    <!-- Menú de Navegación Fijo -->
     <nav>
-        <a href="index.html">Inicio</a>
+        <a href="#">Inicio</a> | 
+        <a href="#">Categorías</a> | 
+        <a href="#">Sobre mí</a> | 
         <a href="contacto.html">Contacto</a>
-        <a href="privacidad.html">Privacidad</a>
     </nav>
 
-    <!-- Listado de Artículos -->
-    <main>
-        <div class="grid-articulos">
-            
-            <!-- TARJETA DEL PRIMER ARTÍCULO (CORREGIDA CON GUION BAJO) -->
-            <article class="tarjeta-articulo">
-                <div class="fecha">Publicado el 13 de julio de 2026</div>
-                <h2><a href="entradas/tecnicas_de_estudio.html">Las 3 Técnicas de Estudio Científicamente Probadas para Exámenes Finales</a></h2>
-                <p class="descripcion">Descubre cómo mejorar tu rendimiento académico y afrontar tus materias con éxito usando métodos activos como el Active Recall y la organización del tiempo.</p>
-                <a href="entradas/tecnicas_de_estudio.html" class="leer-mas">Leer artículo completo →</a>
-            </article>
-
-            <!-- Próximos artículos van acá abajo -->
-            
+    <!-- ===== SECCIÓN DE ARTÍCULOS DINÁMICOS ===== -->
+    <section id="articulos" class="tarjeta-articulo">
+        <h2>📖 Últimas Entradas</h2>
+        <div id="lista-articulos">
+            <p style="color: #888;">Cargando artículos...</p>
         </div>
-    </main>
+    </section>
+    <!-- ===== FIN SECCIÓN ARTÍCULOS ===== -->
+
+    <!-- Puedes mantener el resto de tu contenido aquí (sidebar, etc.) -->
 
     <footer>
-        <p>© 2026 Mi Blog Universitario. Desarrollado con código limpio y optimizado para alto rendimiento.</p>
+        <p>© 2026 Mi Blog Universitario. Hecho con 📚 y ☕.</p>
     </footer>
+
+    <!-- ===== SCRIPT PARA CARGAR ARTÍCULOS ===== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('entradas/lista.json')
+                .then(res => {
+                    if (!res.ok) throw new Error('No se pudo cargar la lista de artículos');
+                    return res.json();
+                })
+                .then(articulos => {
+                    const contenedor = document.getElementById('lista-articulos');
+                    if (!contenedor) return;
+                    
+                    // Ordenar por fecha (más reciente primero)
+                    articulos.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+                    
+                    const html = articulos.map(a => `
+                        <article class="post-preview">
+                            <h2><a href="entradas/${a.archivo}">${a.titulo}</a></h2>
+                            <p class="resumen">${a.resumen}</p>
+                            <small class="fecha">📅 ${formatearFecha(a.fecha)}</small>
+                            ${a.etiquetas ? `<div class="etiquetas">${a.etiquetas.map(t => `<span class="etiqueta">#${t}</span>`).join(' ')}</div>` : ''}
+                        </article>
+                    `).join('');
+                    
+                    contenedor.innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    const contenedor = document.getElementById('lista-articulos');
+                    if (contenedor) {
+                        contenedor.innerHTML = '<p style="color: #c0392b;">⚠️ No se pudieron cargar los artículos. Intenta más tarde.</p>';
+                    }
+                });
+        });
+
+        function formatearFecha(fechaStr) {
+            const fecha = new Date(fechaStr);
+            const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
+            return fecha.toLocaleDateString('es-ES', opciones);
+        }
+    </script>
+    <!-- ===== FIN SCRIPT ===== -->
 
 </body>
 </html>
