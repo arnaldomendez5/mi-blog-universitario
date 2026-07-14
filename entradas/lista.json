@@ -12,5 +12,12 @@
         "resumen": "Guía completa para visitar las Barrancas de Neuquén: cómo llegar, qué ver, mejor época y consejos para esta joya poco conocida de la Patagonia.",
         "fecha": "2026-07-13",
         "etiquetas": ["viajes", "neuquén", "patagonia", "naturaleza"]
+    },
+    {
+        "archivo": "prevencion-accidentes.html",
+        "titulo": "🚗 Prevención de Accidentes Automovilísticos: Guía para Conductores",
+        "resumen": "Consejos prácticos para prevenir accidentes de tránsito. Estadísticas, factores de riesgo, medidas preventivas y protocolo de emergencia.",
+        "fecha": "2026-07-13",
+        "etiquetas": ["seguridad", "conducción", "prevención", "viales"]
     }
 ]
