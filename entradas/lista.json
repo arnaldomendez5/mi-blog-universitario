@@ -26,9 +26,7 @@
         "resumen": "Descubre cómo la música afecta tu cerebro, reduce el estrés, mejora la memoria y potencia tu bienestar emocional. Incluye playlist recomendada.",
         "fecha": "2026-07-13",
         "etiquetas": ["música", "psicología", "bienestar", "cerebro"]
-    }
-]
-
+    },
     {
         "archivo": "que-es-una-rave.html",
         "titulo": "🎵 ¿Qué es una Rave? Historia, Filosofía y Cultura",
@@ -36,4 +34,4 @@
         "fecha": "2026-07-14",
         "etiquetas": ["música", "cultura", "historia", "electrónica", "rave"]
     }
-]...
+]
