@@ -19,5 +19,12 @@
         "resumen": "Consejos prácticos para prevenir accidentes de tránsito. Estadísticas, factores de riesgo, medidas preventivas y protocolo de emergencia.",
         "fecha": "2026-07-13",
         "etiquetas": ["seguridad", "conducción", "prevención", "viales"]
+    },
+    {
+        "archivo": "musica-y-mente.html",
+        "titulo": "🎵 Música y Mente: El Poder Terapéutico de la Música",
+        "resumen": "Descubre cómo la música afecta tu cerebro, reduce el estrés, mejora la memoria y potencia tu bienestar emocional. Incluye playlist recomendada.",
+        "fecha": "2026-07-13",
+        "etiquetas": ["música", "psicología", "bienestar", "cerebro"]
     }
 ]
