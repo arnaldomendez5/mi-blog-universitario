@@ -104,7 +104,115 @@
     <a href="contacto.html">Contacto</a>
     <a href="privacidad.html">Privacidad</a>
 </nav>
+<!-- ===== REPRODUCTOR DE MÚSICA ===== -->
+<div style="background: #1a1a2e; padding: 15px; border-radius: 12px; max-width: 400px; margin: 20px auto; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+    <div style="display: flex; align-items: center; gap: 10px; color: white; font-family: Arial, sans-serif;">
+        <!-- Botón Play/Pausa -->
+        <button id="playBtn" style="background: #e94560; border: none; color: white; font-size: 20px; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">▶</button>
+        
+        <!-- Info de la canción -->
+        <div style="flex: 1; min-width: 0;">
+            <div id="songTitle" style="font-weight: bold; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">🎵 Canciones</div>
+            <div style="display: flex; gap: 5px; flex-wrap: wrap; margin-top: 4px;">
+                <span id="song1" style="background: #0f3460; padding: 2px 10px; border-radius: 10px; font-size: 11px; cursor: pointer; transition: 0.3s;">Relax</span>
+                <span id="song2" style="background: #0f3460; padding: 2px 10px; border-radius: 10px; font-size: 11px; cursor: pointer; transition: 0.3s;">Estudio</span>
+                <span id="song3" style="background: #0f3460; padding: 2px 10px; border-radius: 10px; font-size: 11px; cursor: pointer; transition: 0.3s;">Energía</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Reproductor oculto -->
+    <audio id="miniPlayer" style="width: 100%; margin-top: 8px; border-radius: 6px;"></audio>
+</div>
 
+<script>
+    // ===== CONFIGURACIÓN =====
+    const songs = [
+        { name: 'Relax', file: './songs/relax.mp3' },
+        { name: 'Estudio', file: './songs/estudio.mp3' },
+        { name: 'Energía', file: './songs/energia.mp3' }
+    ];
+
+    // ===== CÓDIGO DEL REPRODUCTOR =====
+    const player = document.getElementById('miniPlayer');
+    const playBtn = document.getElementById('playBtn');
+    const songTitle = document.getElementById('songTitle');
+
+    let currentSongIndex = 0;
+    let isPlaying = false;
+
+    function loadSong(index) {
+        if (index >= 0 && index < songs.length) {
+            currentSongIndex = index;
+            player.src = songs[index].file;
+            songTitle.textContent = '🎵 ' + songs[index].name;
+            
+            // Resaltar canción seleccionada
+            document.querySelectorAll('#song1, #song2, #song3').forEach((el, i) => {
+                el.style.background = i === index ? '#e94560' : '#0f3460';
+            });
+        }
+    }
+
+    function togglePlay() {
+        if (player.src) {
+            if (player.paused) {
+                player.play();
+                playBtn.textContent = '⏸';
+                isPlaying = true;
+            } else {
+                player.pause();
+                playBtn.textContent = '▶';
+                isPlaying = false;
+            }
+        } else {
+            loadSong(0);
+            player.play();
+            playBtn.textContent = '⏸';
+            isPlaying = true;
+        }
+    }
+
+    // Evento al terminar canción
+    player.addEventListener('ended', function() {
+        let next = (currentSongIndex + 1) % songs.length;
+        loadSong(next);
+        player.play();
+    });
+
+    // Evento al hacer clic en una canción
+    document.getElementById('song1').addEventListener('click', function() {
+        loadSong(0);
+        if (!player.paused) player.play();
+        else {
+            player.play();
+            playBtn.textContent = '⏸';
+        }
+    });
+    document.getElementById('song2').addEventListener('click', function() {
+        loadSong(1);
+        if (!player.paused) player.play();
+        else {
+            player.play();
+            playBtn.textContent = '⏸';
+        }
+    });
+    document.getElementById('song3').addEventListener('click', function() {
+        loadSong(2);
+        if (!player.paused) player.play();
+        else {
+            player.play();
+            playBtn.textContent = '⏸';
+        }
+    });
+
+    // Evento del botón Play
+    playBtn.addEventListener('click', togglePlay);
+
+    // Cargar la primera canción al inicio
+    loadSong(0);
+</script>
+<!-- ===== FIN REPRODUCTOR ===== -->
     <!-- ===== SECCIÓN DE ARTÍCULOS DINÁMICOS ===== -->
     <section id="articulos" class="tarjeta-articulo">
         <h2>aca puras cosas que se me ocurren preguntar a la IA</h2>
