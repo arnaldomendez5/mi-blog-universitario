@@ -47,5 +47,12 @@
         "resumen": "Repaso por la vida y carrera de Maradona: sus inicios en Villa Fiorito, el paso por Boca, el 'Fútbol Champagne' en el Napoli, la gloria en el Mundial '86, sus polémicas y su eterno legado.",
         "fecha": "2026-07-15",
         "etiquetas": ["fútbol", "deportes", "historia", "argentina", "maradona"]
-    }
+    },
+    {
+        "archivo": "fotos.html",
+        "titulo": " ni idea: internet,
+        "resumen": "aca hay queescribir resumen",
+        "fecha": "2026-07-15",
+        "etiquetas": ["1", "2", "3", "4", "5"]
+  }
 ]
