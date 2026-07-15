@@ -1,695 +1,661 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Mi Blog Universitario | Apuntes, Código y Proyectos</title>
-<link rel="icon" href="favicon.ico">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<meta name="description" content="Apuntes universitarios, programación, inteligencia artificial, electrónica y proyectos personales.">
-
-<meta name="keywords" content="blog, programación, HTML, CSS, JavaScript, universidad, IA, medicina, proyectos">
-
-<meta name="author" content="Arnaldo Méndez">
-
-<meta property="og:title" content="Mi Blog Universitario">
-<meta property="og:description" content="Ideas, proyectos y apuntes universitarios.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="img/portada.jpg">
-
-<meta name="theme-color" content="#2563eb">
-
-<link rel="icon" href="favicon.ico">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-
-    font-family:Arial, Helvetica, sans-serif;
-
-    background-color:#edf2f7;
-
-    background-image:
-    linear-gradient(#ffffff 2px, transparent 2px),
-    linear-gradient(90deg,#ffffff 2px,transparent 2px);
-
-    background-size:40px 40px;
-
-    color:#333;
-
-    line-height:1.7;
-
-}
-
-header{
-
-    background:linear-gradient(135deg,#2563eb,#1e3a8a);
-
-    color:white;
-
-    text-align:center;
-
-    padding:45px 20px;
-
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-
-}
-
-header h1{
-
-    font-size:2.4rem;
-
-    margin-bottom:10px;
-
-}
-
-header p{
-
-    opacity:.9;
-
-}
-
-nav{
-
-    background:white;
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:25px;
-
-    padding:15px;
-
-    position:sticky;
-
-    top:0;
-
-    z-index:100;
-
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
-
-}
-
-nav a{
-
-    text-decoration:none;
-
-    color:#2563eb;
-
-    font-weight:bold;
-
-    transition:.3s;
-
-}
-
-nav a:hover{
-
-    color:#1d4ed8;
-
-}
-
-.container{
-
-    max-width:900px;
-
-    margin:25px auto;
-
-    padding:15px;
-
-}
-.post-preview{
-
-    background:white;
-
-    border-radius:12px;
-
-    padding:20px;
-
-    margin-bottom:20px;
-
-    box-shadow:0 3px 10px rgba(0,0,0,.08);
-
-    transition:.3s;
-
-}
-
-.post-preview:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-
-}
-
-.post-preview h2{
-
-    margin-bottom:10px;
-
-    font-size:1.5rem;
-
-}
-
-.post-preview h2 a{
-
-    color:#1e3a8a;
-
-    text-decoration:none;
-
-}
-
-.post-preview h2 a:hover{
-
-    text-decoration:underline;
-
-}
-
-.resumen{
-
-    margin:12px 0;
-
-    color:#555;
-
-}
-
-.fecha{
-
-    color:#888;
-
-    font-size:.9rem;
-
-}
-
-.etiquetas{
-
-    margin-top:12px;
-
-}
-
-.etiqueta{
-
-    display:inline-block;
-
-    background:#dbeafe;
-
-    color:#1e3a8a;
-
-    padding:4px 12px;
-
-    border-radius:20px;
-
-    font-size:.8rem;
-
-    margin-right:6px;
-
-    margin-top:5px;
-
-}
-
-.tarjeta{
-
-    background:white;
-
-    border-radius:12px;
-
-    padding:25px;
-
-    margin-bottom:25px;
-
-    box-shadow:0 3px 10px rgba(0,0,0,.08);
-
-}
-
-.player{
-
-    background:#1a1a2e;
-
-    color:white;
-
-    border-radius:15px;
-
-    padding:18px;
-
-    margin:25px 0;
-
-}
-
-.player button{
-
-    width:45px;
-
-    height:45px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#e94560;
-
-    color:white;
-
-    cursor:pointer;
-
-    font-size:18px;
-
-}
-
-.player button:hover{
-
-    opacity:.9;
-
-}
-
-footer{
-
-    background:white;
-
-    margin-top:40px;
-
-    padding:20px;
-
-    text-align:center;
-
-    border-radius:12px;
-
-    color:#666;
-
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
-
-}
-
-#modoOscuro{
-
-    position:fixed;
-
-    right:20px;
-
-    bottom:20px;
-
-    width:55px;
-
-    height:55px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#2563eb;
-
-    color:white;
-
-    font-size:22px;
-
-    cursor:pointer;
-
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
-
-}
-
-body.dark{
-
-    background:#111827;
-
-    color:#eee;
-
-}
-
-body.dark nav,
-
-body.dark .tarjeta,
-
-body.dark .post-preview,
-
-body.dark footer{
-
-    background:#1f2937;
-
-    color:white;
-
-}
-
-body.dark a{
-
-    color:#7dd3fc;
-
-}
-
-@keyframes aparecer{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(20px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-
-.post-preview{
-
-    animation:aparecer .5s ease;
-
-}
-
-@media(max-width:700px){
-
-header h1{
-
-font-size:1.8rem;
-
-}
-
-nav{
-
-flex-wrap:wrap;
-
-gap:15px;
-
-}
-
-.post-preview h2{
-
-font-size:1.2rem;
-
-}
-
-}
-</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💀 BLOG ARNALDO · SIN FILTROS</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="description" content="Apuntes universitarios, programación, IA, electrónica y proyectos sin filtro." />
+    <meta name="keywords" content="blog, programación, HTML, CSS, JavaScript, universidad, IA, medicina, proyectos" />
+    <meta name="author" content="Arnaldo Méndez" />
+    <meta property="og:title" content="🔥 BLOG ARNALDO" />
+    <meta property="og:description" content="Ideas, proyectos y apuntes universitarios. Sin filtros." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="img/portada.jpg" />
+    <meta name="theme-color" content="#ff1744" />
+
+    <style>
+        /* ============================================================
+           RESET AGRESIVO
+           ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            background-image:
+                repeating-linear-gradient(0deg, #1a1a1a 1px, transparent 1px),
+                repeating-linear-gradient(90deg, #1a1a1a 1px, transparent 1px);
+            background-size: 40px 40px;
+            font-family: 'Impact', 'Arial Black', system-ui, sans-serif;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 0 1rem 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ============================================================
+           HEADER – ROJO/NEGRO
+           ============================================================ */
+        .header {
+            width: 100%;
+            max-width: 1200px;
+            background: linear-gradient(135deg, #0d0d0d 60%, #1a0000);
+            border-bottom: 6px solid #ff1744;
+            padding: 2rem 2rem 1.5rem;
+            margin-bottom: 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            box-shadow: 0 10px 40px rgba(255, 23, 68, 0.15);
+        }
+
+        .header h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 1;
+            background: linear-gradient(135deg, #ff1744, #ff9100);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(255, 23, 68, 0.3);
+        }
+
+        .header .sub {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #888;
+            border: 2px solid #ff1744;
+            padding: 0.3rem 1.2rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            background: rgba(255, 23, 68, 0.05);
+        }
+
+        .header img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 0;
+            margin-top: 1rem;
+            border: 2px solid #2a2a2a;
+            filter: grayscale(20%) contrast(120%);
+        }
+
+        /* ============================================================
+           NAV – AGGRESSIVE
+           ============================================================ */
+        .nav {
+            width: 100%;
+            max-width: 1200px;
+            background: #111;
+            border: 2px solid #2a2a2a;
+            padding: 0.8rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .nav a {
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            text-decoration: none;
+            color: #ccc;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+            transition: 0.2s;
+            padding: 0.2rem 0;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav a:hover {
+            color: #ff1744;
+            border-bottom-color: #ff1744;
+        }
+
+        /* ============================================================
+           CONTENEDOR PRINCIPAL
+           ============================================================ */
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* ============================================================
+           TARJETAS (BIENVENIDA, ETC.)
+           ============================================================ */
+        .tarjeta {
+            background: #121212;
+            border: 2px solid #2a2a2a;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 0;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .tarjeta h2 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            color: #fff;
+            border-bottom: 4px solid #ff1744;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .tarjeta p {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            color: #aaa;
+            font-size: 1.05rem;
+        }
+
+        /* ============================================================
+           REPRODUCTOR – ESTILO PESADO
+           ============================================================ */
+        .player {
+            background: #0d0d0d;
+            border: 2px solid #ff1744;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            box-shadow: 0 0 30px rgba(255, 23, 68, 0.1);
+        }
+
+        .player button {
+            width: 60px;
+            height: 60px;
+            border: 3px solid #ff1744;
+            border-radius: 0;
+            background: transparent;
+            color: #ff1744;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: 0.2s;
+            font-weight: 900;
+        }
+
+        .player button:hover {
+            background: #ff1744;
+            color: #000;
+        }
+
+        .player .info {
+            flex: 1;
+            font-family: 'Courier New', monospace;
+        }
+
+        .player .info #songTitle {
+            font-size: 1.2rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .player .etiquetas {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 0.6rem;
+        }
+
+        .player .etiquetas span {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 0.2rem 1rem;
+            color: #aaa;
+            cursor: pointer;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            transition: 0.2s;
+            font-family: 'Impact', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        .player .etiquetas span:hover {
+            border-color: #ff1744;
+            color: #ff1744;
+        }
+
+        /* ============================================================
+           LISTA DE ARTÍCULOS – GRILLA AGRESIVA
+           ============================================================ */
+        #lista-articulos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .post-preview {
+            background: #121212;
+            border: 2px solid #2a2a2a;
+            padding: 1.8rem 1.5rem;
+            transition: all 0.2s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border-radius: 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .post-preview:hover {
+            border-color: #ff1744;
+            transform: scale(1.02) translateY(-5px);
+            box-shadow: 0 12px 40px rgba(255, 23, 68, 0.2);
+            background: #1a1a1a;
+        }
+
+        .post-preview::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #ff1744;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .post-preview:hover::before {
+            transform: scaleX(1);
+        }
+
+        .post-preview h2 {
+            font-size: 1.6rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 0.6rem;
+        }
+
+        .post-preview h2 a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .post-preview h2 a:hover {
+            color: #ff1744;
+        }
+
+        .post-preview .resumen {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            font-size: 0.95rem;
+            color: #aaa;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+            flex: 1;
+        }
+
+        .post-preview .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 2px solid #1f1f1f;
+            padding-top: 0.8rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.75rem;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        .post-preview .etiquetas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .post-preview .etiquetas .etiqueta {
+            background: #1f1f1f;
+            border: 1px solid #2a2a2a;
+            padding: 0.1rem 0.7rem;
+            font-size: 0.65rem;
+            color: #aaa;
+            transition: 0.2s;
+            font-family: 'Impact', sans-serif;
+            letter-spacing: 0.3px;
+            text-transform: lowercase;
+        }
+
+        .post-preview .etiquetas .etiqueta:hover {
+            border-color: #ff1744;
+            color: #fff;
+        }
+
+        .post-preview .fecha {
+            color: #555;
+            font-size: 0.7rem;
+        }
+
+        /* ============================================================
+           COMENTARIOS (UTTERANCES)
+           ============================================================ */
+        .comentarios {
+            margin-top: 2.5rem;
+        }
+        .comentarios p {
+            font-family: 'Segoe UI', sans-serif;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        .footer {
+            margin-top: 3rem;
+            border-top: 3px solid #1f1f1f;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            color: #444;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .footer strong {
+            color: #ff1744;
+        }
+
+        /* ============================================================
+           BOTÓN MODO OSCURO (siempre visible)
+           ============================================================ */
+        #modoOscuro {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            border: 3px solid #ff1744;
+            border-radius: 0;
+            background: #0d0d0d;
+            color: #ff1744;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 0 30px rgba(255, 23, 68, 0.15);
+            transition: 0.2s;
+            z-index: 999;
+        }
+
+        #modoOscuro:hover {
+            background: #ff1744;
+            color: #000;
+        }
+
+        /* ============================================================
+           MODO OSCURO (ya está oscuro, pero lo dejamos para alternar)
+           ============================================================ */
+        body.dark {
+            background: #050505;
+            background-image:
+                repeating-linear-gradient(0deg, #111 1px, transparent 1px),
+                repeating-linear-gradient(90deg, #111 1px, transparent 1px);
+        }
+
+        body.dark .tarjeta,
+        body.dark .post-preview,
+        body.dark .player,
+        body.dark .nav {
+            background: #0a0a0a;
+            border-color: #222;
+        }
+
+        body.dark .post-preview h2 a {
+            color: #eee;
+        }
+
+        body.dark .post-preview .resumen {
+            color: #888;
+        }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 700px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            .header .sub {
+                font-size: 0.7rem;
+            }
+            #lista-articulos {
+                grid-template-columns: 1fr;
+            }
+            .nav {
+                gap: 1.2rem;
+                padding: 0.6rem 1rem;
+            }
+            .nav a {
+                font-size: 0.9rem;
+            }
+            .player {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .player button {
+                width: 100%;
+                height: 50px;
+            }
+        }
+
+        /* ============================================================
+           ANIMACIÓN DE APARICIÓN
+           ============================================================ */
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .post-preview {
+            animation: aparecer 0.4s ease;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-<img src="img/file_000000009540720eba54e16e68d6cd7b.png"
-     alt="Portada del blog"
-     style="width:100%; max-width:900px; display:block; margin:20px auto; border-radius:12px;">
-    <h1>🌐 Al 2pe en Internet</h1>
-    <p>Apuntes universitarios · Programación · IA · Electrónica · Proyectos</p>
-</header>
+    <!-- ============================================================
+    HEADER
+    ============================================================ -->
+    <header class="header">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;width:100%;">
+            <h1>🔥 BLOG<br/>ARNALDO</h1>
+            <div class="sub">#SIN_FILTROS</div>
+        </div>
+        <img src="img/file_000000009540720eba54e16e68d6cd7b.png"
+             alt="Portada del blog"
+             style="width:100%; max-height:200px; object-fit:cover; border:2px solid #2a2a2a; margin-top:1rem;" />
+    </header>
 
-<nav>
-    <a href="index.html">🏠 Inicio</a>
-    <a href="contacto.html">📧 Contacto</a>
-    <a href="privacidad.html">🔒 Privacidad</a>
-</nav>
+    <!-- ============================================================
+    NAV
+    ============================================================ -->
+    <nav class="nav">
+        <a href="index.html">🏠 Inicio</a>
+        <a href="contacto.html">📧 Contacto</a>
+        <a href="privacidad.html">🔒 Privacidad</a>
+    </nav>
 
-<div class="container">
+    <!-- ============================================================
+    CONTENIDO PRINCIPAL
+    ============================================================ -->
+    <div class="container">
 
-    <section class="tarjeta">
-        <h2>👋 Bienvenido</h2>
+        <!-- BIENVENIDA -->
+        <section class="tarjeta">
+            <h2>👊 Bienvenido</h2>
+            <p>Welcome People · Sin filtros · Sin vueltas · Contenido fuerte.</p>
+        </section>
 
-        <p>
-            Welcome People 
-        </p>
-    </section>
-
-    <section class="player">
-
-        <div style="display:flex;align-items:center;gap:15px;">
-
+        <!-- REPRODUCTOR -->
+        <section class="player">
             <button id="playBtn">▶</button>
-
-            <div style="flex:1;">
-
-                <div id="songTitle">
-                    1
+            <div class="info">
+                <div id="songTitle">🎵 Cargando...</div>
+                <div class="etiquetas">
+                    <span id="song1">Relax</span>
+                    <span id="song2">Estudio</span>
+                    <span id="song3">Energía</span>
                 </div>
-
-                <div style="margin-top:10px;">
-
-                    <span id="song1" class="etiqueta" style="cursor:pointer;">
-                        Relax
-                    </span>
-
-                    <span id="song2" class="etiqueta" style="cursor:pointer;">
-                        Estudio
-                    </span>
-
-                    <span id="song3" class="etiqueta" style="cursor:pointer;">
-                        Energía
-                    </span>
-
-                </div>
-
             </div>
-
-        </div>
-
-        <audio id="miniPlayer"></audio>
-
-    </section>
-
-    <section class="tarjeta">
-
-        <h2> Últimos artículos</h2>
-
-        <div id="lista-articulos">
-
-            <p style="color:gray;">
-                Cargando artículos...
-            </p>
-
-        </div>
-
-    </section>
-
-    <section class="tarjeta">
-
-        <h2>💬 Comentarios</h2>
-
-        <script
-            src="https://utteranc.es/client.js"
-            repo="arnaldomendez5/mi-blog-universitario"
-            issue-term="pathname"
-            theme="github-light"
-            crossorigin="anonymous"
-            async>
-        </script>
-
-        <p style="margin-top:15px;color:gray;">
-            Inicia sesión con GitHub para dejar un comentario.
-        </p>
-
-    </section>
-
-    <footer>
-
-        <p>
-            © 2026 N4N01944
-        </p>
-
-    </footer>
-
-</div>
-
-<button id="modoOscuro">
-🌙
-</button>
-<script>
-
-// ===============================
-// REPRODUCTOR DE MÚSICA
-// ===============================
-
-const songs = [
-  { name: "Back In Black", file: "./songs/06BackInBlack.mp3" },
-  { name: "Shake A Leg", file: "./songs/09-ShakeaLeg.mp3" }
-];
-const player = document.getElementById("miniPlayer");
-const playBtn = document.getElementById("playBtn");
-const songTitle = document.getElementById("songTitle");
-
-let currentSong = 0;
-
-function cargarCancion(i){
-    currentSong = i;
-    player.src = songs[i].file;
-    songTitle.textContent = "🎵 " + songs[i].name;
-}
-
-playBtn.onclick = function(){
-
-    if(player.paused){
-        player.play();
-    }else{
-        player.pause();
-    }
-
-};
-
-player.addEventListener("play",()=>{
-    playBtn.textContent="⏸";
-});
-
-player.addEventListener("pause",()=>{
-    playBtn.textContent="▶";
-});
-
-player.addEventListener("ended",()=>{
-
-    currentSong++;
-
-    if(currentSong>=songs.length){
-
-        currentSong=0;
-
-    }
-
-    cargarCancion(currentSong);
-
-    player.play();
-
-});
-
-document.getElementById("song1").onclick=()=>{
-
-    cargarCancion(0);
-
-    player.play();
-
-};
-
-document.getElementById("song2").onclick=()=>{
-
-    cargarCancion(1);
-
-    player.play();
-
-};
-
-document.getElementById("song3").onclick=()=>{
-
-    cargarCancion(2);
-
-    player.play();
-
-};
-
-cargarCancion(0);
-
-// ===============================
-// CARGAR ARTÍCULOS
-// ===============================
-
-fetch("entradas/lista.json")
-
-.then(r=>r.json())
-
-.then(datos=>{
-
-    datos.sort((a,b)=>new Date(b.fecha)-new Date(a.fecha));
-
-    const lista=document.getElementById("lista-articulos");
-
-    lista.innerHTML="";
-
-    datos.forEach(post=>{
-
-        lista.innerHTML+=`
-
-        <article class="post-preview">
-
-            <h2>
-
-            <a href="entradas/${post.archivo}">
-
-            ${post.titulo}
-
-            </a>
-
-            </h2>
-
-            <p class="resumen">
-
-            ${post.resumen}
-
-            </p>
-
-            <small class="fecha">
-
-            📅 ${new Date(post.fecha).toLocaleDateString("es-ES")}
-
-            </small>
-
-            <div class="etiquetas">
-
-            ${
-                post.etiquetas
-                .map(e=>`<span class="etiqueta">#${e}</span>`)
-                .join("")
+            <audio id="miniPlayer"></audio>
+        </section>
+
+        <!-- ARTÍCULOS -->
+        <section class="tarjeta" style="border-color:#333;">
+            <h2>⚡ Últimos artículos</h2>
+            <div id="lista-articulos">
+                <p style="color:#555; font-family:'Segoe UI',sans-serif;">Cargando artículos...</p>
+            </div>
+        </section>
+
+        <!-- COMENTARIOS -->
+        <section class="tarjeta comentarios">
+            <h2>💬 Comentarios</h2>
+            <script
+                src="https://utteranc.es/client.js"
+                repo="arnaldomendez5/mi-blog-universitario"
+                issue-term="pathname"
+                theme="github-dark"
+                crossorigin="anonymous"
+                async>
+            </script>
+            <p>Inicia sesión con GitHub para dejar un comentario.</p>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>© 2026 <strong>N4N01944</strong> · SIN MIEDO</p>
+        </footer>
+    </div>
+
+    <!-- ============================================================
+    BOTÓN MODO OSCURO
+    ============================================================ -->
+    <button id="modoOscuro">🌙</button>
+
+    <!-- ============================================================
+    SCRIPTS
+    ============================================================ -->
+    <script>
+        // ===============================
+        // REPRODUCTOR DE MÚSICA
+        // ===============================
+        const songs = [
+            { name: "Back In Black", file: "./songs/06BackInBlack.mp3" },
+            { name: "Shake A Leg", file: "./songs/09-ShakeaLeg.mp3" }
+        ];
+        const player = document.getElementById("miniPlayer");
+        const playBtn = document.getElementById("playBtn");
+        const songTitle = document.getElementById("songTitle");
+
+        let currentSong = 0;
+
+        function cargarCancion(i) {
+            if (i >= songs.length) i = 0;
+            currentSong = i;
+            player.src = songs[i].file;
+            songTitle.textContent = "🎵 " + songs[i].name;
+        }
+
+        playBtn.onclick = function() {
+            if (player.paused) {
+                player.play();
+            } else {
+                player.pause();
             }
+        };
 
-            </div>
+        player.addEventListener("play", () => { playBtn.textContent = "⏸"; });
+        player.addEventListener("pause", () => { playBtn.textContent = "▶"; });
+        player.addEventListener("ended", () => {
+            currentSong++;
+            if (currentSong >= songs.length) currentSong = 0;
+            cargarCancion(currentSong);
+            player.play();
+        });
 
-        </article>
+        document.getElementById("song1").onclick = () => { cargarCancion(0);
+            player.play(); };
+        document.getElementById("song2").onclick = () => { cargarCancion(1);
+            player.play(); };
+        document.getElementById("song3").onclick = () => { cargarCancion(2);
+            player.play(); };
 
-        `;
+        cargarCancion(0);
 
-    });
+        // ===============================
+        // CARGAR ARTÍCULOS DESDE lista.json
+        // ===============================
+        fetch("entradas/lista.json")
+            .then(r => r.json())
+            .then(datos => {
+                datos.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+                const lista = document.getElementById("lista-articulos");
+                lista.innerHTML = "";
+                datos.forEach(post => {
+                    lista.innerHTML += `
+                    <article class="post-preview">
+                        <h2><a href="entradas/${post.archivo}">${post.titulo}</a></h2>
+                        <p class="resumen">${post.resumen}</p>
+                        <div class="meta">
+                            <span class="fecha">📅 ${new Date(post.fecha).toLocaleDateString("es-ES")}</span>
+                            <div class="etiquetas">
+                                ${post.etiquetas.map(e => `<span class="etiqueta">#${e}</span>`).join("")}
+                            </div>
+                        </div>
+                    </article>
+                    `;
+                });
+            })
+            .catch(() => {
+                document.getElementById("lista-articulos").innerHTML =
+                    `<p style="color:#ff1744;font-family:'Impact',sans-serif;">💀 ERROR: No se pudieron cargar los artículos.</p>`;
+            });
 
-})
+        // ===============================
+        // MODO OSCURO (alterna)
+        // ===============================
+        const boton = document.getElementById("modoOscuro");
+        if (localStorage.getItem("modo") === "oscuro") {
+            document.body.classList.add("dark");
+            boton.textContent = "☀️";
+        }
 
-.catch(()=>{
+        boton.onclick = function() {
+            document.body.classList.toggle("dark");
+            if (document.body.classList.contains("dark")) {
+                localStorage.setItem("modo", "oscuro");
+                boton.textContent = "☀️";
+            } else {
+                localStorage.setItem("modo", "claro");
+                boton.textContent = "🌙";
+            }
+        };
+    </script>
 
-document.getElementById("lista-articulos").innerHTML=`
-<p>No fue posible cargar los artículos.</p>
-`;
-
-});
-
-// ===============================
-// MODO OSCURO
-// ===============================
-
-const boton=document.getElementById("modoOscuro");
-
-if(localStorage.getItem("modo")=="oscuro"){
-
-document.body.classList.add("dark");
-
-boton.textContent="☀️";
-
-}
-
-boton.onclick=function(){
-
-document.body.classList.toggle("dark");
-
-if(document.body.classList.contains("dark")){
-
-localStorage.setItem("modo","oscuro");
-
-boton.textContent="☀️";
-
-}else{
-
-localStorage.setItem("modo","claro");
-
-boton.textContent="🌙";
-
-}
-
-};
-
-</script>
-
-
-<script data-goatcounter="https://al2pe.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+    <!-- GoatCounter -->
+    <script data-goatcounter="https://al2pe.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
