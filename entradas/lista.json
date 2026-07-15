@@ -28,17 +28,17 @@
         "etiquetas": ["música", "psicología", "bienestar", "cerebro"]
     },
     {
-        "archivo": "que-es-una-rave.html",
-        "titulo": "🎵 ¿Qué es una Rave? Historia, Filosofía y Cultura",
-        "resumen": "Descubre qué es una rave, su origen en el Londres de los 80, la filosofía PLUR, sus características y por qué genera tanta fascinación (y controversia).",
-        "fecha": "2026-07-14",
-        "etiquetas": ["música", "cultura", "historia", "electrónica", "rave"]
-    }
+    "archivo": "que-es-una-rave.html",
+    "titulo": "🎵 ¿Qué es una Rave? Historia, Filosofía y Cultura",
+    "resumen": "Descubre qué es una rave, su origen en el Londres de los 80, la filosofía PLUR, sus características y por qué genera tanta fascinación (y controversia).",
+    "fecha": "2026-07-14",
+    "etiquetas": ["música", "cultura", "historia", "electrónica", "rave"]
+  },
+  {
+    "titulo": "Ciberestafas: cómo identificarlas y protegerte",
+    "resumen": "Guía práctica sobre los tipos más comunes de estafas digitales, cómo reconocerlas y cómo protegerte.",
+    "fecha": "2026-07-15",
+    "archivo": "ciberestafas.html",
+    "etiquetas": ["seguridad", "ciberestafas", "phishing"]
+  }
 ]
-{
-  "titulo": "Ciberestafas: cómo identificarlas y protegerte",
-  "resumen": "Guía práctica sobre los tipos más comunes de estafas digitales, cómo reconocerlas y cómo protegerte.",
-  "fecha": "2026-07-15",
-  "archivo": "ciberestafas.html",
-  "etiquetas": ["seguridad", "ciberestafas", "phishing"]
-}
