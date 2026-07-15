@@ -1,291 +1,692 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Blog Universitario | Apuntes, Código y Proyectos</title>
-    <meta name="description" content="Espacio digital de aprendizaje, apuntes universitarios, desarrollo web y guías prácticas para estudiantes. No creas nada de lo que ves">
-    <style>
-        * { box-sizing: border-box; }
-        
-        /* PAPEL TAPIZ SUTIL CON CSS (Patrón de cuadrícula universitaria) */
-        body { 
-            font-family: sans-serif; 
-            line-height: 1.6; 
-            max-width: 800px; 
-            margin: 0 auto; 
-            padding: 20px; 
-            color: #333; 
-            background-color: #e5e9f0;
-            background-image: 
-                linear-gradient(#ffffff 2px, transparent 2px),
-                linear-gradient(90deg, #ffffff 2px, transparent 2px);
-            background-size: 40px 40px;
-            background-position: -2px -2px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* Contenedor principal blanco para que el texto resalte sobre el fondo */
-        header, nav, .tarjeta-articulo, footer { 
-            background: #ffffff; 
-            padding: 20px; 
-            border-radius: 8px; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            margin-bottom: 20px; 
-        }
+<title>Mi Blog Universitario | Apuntes, Código y Proyectos</title>
 
-        /* ===== NUEVOS ESTILOS PARA ARTÍCULOS DINÁMICOS ===== */
-        .post-preview {
-            padding: 15px 0;
-            border-bottom: 1px solid #eee;
-        }
+<meta name="description" content="Apuntes universitarios, programación, inteligencia artificial, electrónica y proyectos personales.">
 
-        .post-preview:last-child {
-            border-bottom: none;
-        }
+<meta name="keywords" content="blog, programación, HTML, CSS, JavaScript, universidad, IA, medicina, proyectos">
 
-        .post-preview h2 {
-            margin: 0 0 5px 0;
-            font-size: 1.3rem;
-        }
+<meta name="author" content="Arnaldo Méndez">
 
-        .post-preview h2 a {
-            color: #2c3e50;
-            text-decoration: none;
-        }
+<meta property="og:title" content="Mi Blog Universitario">
+<meta property="og:description" content="Ideas, proyectos y apuntes universitarios.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/portada.jpg">
 
-        .post-preview h2 a:hover {
-            text-decoration: underline;
-        }
+<meta name="theme-color" content="#2563eb">
 
-        .post-preview .resumen {
-            margin: 8px 0;
-            color: #555;
-        }
+<link rel="icon" href="favicon.ico">
 
-        .post-preview .fecha {
-            color: #888;
-            font-size: 0.85rem;
-        }
+<style>
 
-        .post-preview .etiquetas {
-            margin-top: 8px;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        .post-preview .etiqueta {
-            display: inline-block;
-            background: #eef2f7;
-            padding: 2px 12px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            color: #555;
-            margin-right: 5px;
-        }
+body{
 
-        /* Responsive para móvil */
-        @media (max-width: 600px) {
-            .post-preview h2 {
-                font-size: 1.1rem;
-            }
-        }
-        /* ===== FIN ESTILOS NUEVOS ===== */
+    font-family:Arial, Helvetica, sans-serif;
 
-        /* Puedes mantener el resto de tus estilos personalizados aquí */
-    </style>
+    background-color:#edf2f7;
+
+    background-image:
+    linear-gradient(#ffffff 2px, transparent 2px),
+    linear-gradient(90deg,#ffffff 2px,transparent 2px);
+
+    background-size:40px 40px;
+
+    color:#333;
+
+    line-height:1.7;
+
+}
+
+header{
+
+    background:linear-gradient(135deg,#2563eb,#1e3a8a);
+
+    color:white;
+
+    text-align:center;
+
+    padding:45px 20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+header h1{
+
+    font-size:2.4rem;
+
+    margin-bottom:10px;
+
+}
+
+header p{
+
+    opacity:.9;
+
+}
+
+nav{
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    padding:15px;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:#2563eb;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#1d4ed8;
+
+}
+
+.container{
+
+    max-width:900px;
+
+    margin:25px auto;
+
+    padding:15px;
+
+}
+.post-preview{
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.post-preview:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.post-preview h2{
+
+    margin-bottom:10px;
+
+    font-size:1.5rem;
+
+}
+
+.post-preview h2 a{
+
+    color:#1e3a8a;
+
+    text-decoration:none;
+
+}
+
+.post-preview h2 a:hover{
+
+    text-decoration:underline;
+
+}
+
+.resumen{
+
+    margin:12px 0;
+
+    color:#555;
+
+}
+
+.fecha{
+
+    color:#888;
+
+    font-size:.9rem;
+
+}
+
+.etiquetas{
+
+    margin-top:12px;
+
+}
+
+.etiqueta{
+
+    display:inline-block;
+
+    background:#dbeafe;
+
+    color:#1e3a8a;
+
+    padding:4px 12px;
+
+    border-radius:20px;
+
+    font-size:.8rem;
+
+    margin-right:6px;
+
+    margin-top:5px;
+
+}
+
+.tarjeta{
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+}
+
+.player{
+
+    background:#1a1a2e;
+
+    color:white;
+
+    border-radius:15px;
+
+    padding:18px;
+
+    margin:25px 0;
+
+}
+
+.player button{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#e94560;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+.player button:hover{
+
+    opacity:.9;
+
+}
+
+footer{
+
+    background:white;
+
+    margin-top:40px;
+
+    padding:20px;
+
+    text-align:center;
+
+    border-radius:12px;
+
+    color:#666;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+
+}
+
+#modoOscuro{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+}
+
+body.dark{
+
+    background:#111827;
+
+    color:#eee;
+
+}
+
+body.dark nav,
+
+body.dark .tarjeta,
+
+body.dark .post-preview,
+
+body.dark footer{
+
+    background:#1f2937;
+
+    color:white;
+
+}
+
+body.dark a{
+
+    color:#7dd3fc;
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.post-preview{
+
+    animation:aparecer .5s ease;
+
+}
+
+@media(max-width:700px){
+
+header h1{
+
+font-size:1.8rem;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+gap:15px;
+
+}
+
+.post-preview h2{
+
+font-size:1.2rem;
+
+}
+
+}
+</style>
 </head>
 <body>
 
-    <header>
-        <h1>al 2pe en internet</h1>
-        <p>Bienvenidos</p>
-    </header>
+<header>
+    <h1>🌐 Al 2pe en Internet</h1>
+    <p>Apuntes universitarios · Programación · IA · Electrónica · Proyectos</p>
+</header>
 
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="contacto.html">Contacto</a>
-    <a href="privacidad.html">Privacidad</a>
+<nav>
+    <a href="index.html">🏠 Inicio</a>
+    <a href="contacto.html">📧 Contacto</a>
+    <a href="privacidad.html">🔒 Privacidad</a>
 </nav>
-<!-- ===== REPRODUCTOR DE MÚSICA ===== -->
-<div style="background: #1a1a2e; padding: 15px; border-radius: 12px; max-width: 400px; margin: 20px auto; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-    <div style="display: flex; align-items: center; gap: 10px; color: white; font-family: Arial, sans-serif;">
-        <!-- Botón Play/Pausa -->
-        <button id="playBtn" style="background: #e94560; border: none; color: white; font-size: 20px; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">▶</button>
-        
-        <!-- Info de la canción -->
-        <div style="flex: 1; min-width: 0;">
-            <div id="songTitle" style="font-weight: bold; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">🎵 Canciones</div>
-            <div style="display: flex; gap: 5px; flex-wrap: wrap; margin-top: 4px;">
-                <span id="song1" style="background: #0f3460; padding: 2px 10px; border-radius: 10px; font-size: 11px; cursor: pointer; transition: 0.3s;">Relax</span>
-                <span id="song2" style="background: #0f3460; padding: 2px 10px; border-radius: 10px; font-size: 11px; cursor: pointer; transition: 0.3s;">Estudio</span>
-                <span id="song3" style="background: #0f3460; padding: 2px 10px; border-radius: 10px; font-size: 11px; cursor: pointer; transition: 0.3s;">Energía</span>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Reproductor oculto -->
-    <audio id="miniPlayer" style="width: 100%; margin-top: 8px; border-radius: 6px;"></audio>
-</div>
 
-<script>
-    // ===== CONFIGURACIÓN =====
-    const songs = [
-        { name: 'Relax', file: './songs/relax.mp3' },
-        { name: 'Estudio', file: './songs/estudio.mp3' },
-        { name: 'Energía', file: './songs/energia.mp3' }
-    ];
+<div class="container">
 
-    // ===== CÓDIGO DEL REPRODUCTOR =====
-    const player = document.getElementById('miniPlayer');
-    const playBtn = document.getElementById('playBtn');
-    const songTitle = document.getElementById('songTitle');
+    <section class="tarjeta">
+        <h2>👋 Bienvenido</h2>
 
-    let currentSongIndex = 0;
-    let isPlaying = false;
-
-    function loadSong(index) {
-        if (index >= 0 && index < songs.length) {
-            currentSongIndex = index;
-            player.src = songs[index].file;
-            songTitle.textContent = '🎵 ' + songs[index].name;
-            
-            // Resaltar canción seleccionada
-            document.querySelectorAll('#song1, #song2, #song3').forEach((el, i) => {
-                el.style.background = i === index ? '#e94560' : '#0f3460';
-            });
-        }
-    }
-
-    function togglePlay() {
-        if (player.src) {
-            if (player.paused) {
-                player.play();
-                playBtn.textContent = '⏸';
-                isPlaying = true;
-            } else {
-                player.pause();
-                playBtn.textContent = '▶';
-                isPlaying = false;
-            }
-        } else {
-            loadSong(0);
-            player.play();
-            playBtn.textContent = '⏸';
-            isPlaying = true;
-        }
-    }
-
-    // Evento al terminar canción
-    player.addEventListener('ended', function() {
-        let next = (currentSongIndex + 1) % songs.length;
-        loadSong(next);
-        player.play();
-    });
-
-    // Evento al hacer clic en una canción
-    document.getElementById('song1').addEventListener('click', function() {
-        loadSong(0);
-        if (!player.paused) player.play();
-        else {
-            player.play();
-            playBtn.textContent = '⏸';
-        }
-    });
-    document.getElementById('song2').addEventListener('click', function() {
-        loadSong(1);
-        if (!player.paused) player.play();
-        else {
-            player.play();
-            playBtn.textContent = '⏸';
-        }
-    });
-    document.getElementById('song3').addEventListener('click', function() {
-        loadSong(2);
-        if (!player.paused) player.play();
-        else {
-            player.play();
-            playBtn.textContent = '⏸';
-        }
-    });
-
-    // Evento del botón Play
-    playBtn.addEventListener('click', togglePlay);
-
-    // Cargar la primera canción al inicio
-    loadSong(0);
-</script>
-<!-- ===== FIN REPRODUCTOR ===== -->
-    <!-- ===== SECCIÓN DE ARTÍCULOS DINÁMICOS ===== -->
-    <section id="articulos" class="tarjeta-articulo">
-        <h2>aca puras cosas que se me ocurren preguntar a la IA</h2>
-        <div id="lista-articulos">
-            <p style="color: #888;">Cargando artículos...</p>
-        </div>
+        <p>
+            Este es mi rincón de Internet. Aquí comparto apuntes,
+            proyectos, experimentos, programación, electrónica y
+            cualquier cosa interesante que vaya aprendiendo.
+        </p>
     </section>
-    
-    
-    <!-- ===== FIN SECCIÓN ARTÍCULOS ===== -->
-<!-- ===== SECCIÓN DE COMENTARIOS ===== -->
-<h2>💬 Comentarios</h2>
-<div id="comments-section">
-    <script src="https://utteranc.es/client.js"
-        repo="arnaldomendez5/mi-blog-universitario"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-    </script>
-    <p style="color: #888; font-size: 0.9rem;">
-        💡 Los comentarios se cargan desde GitHub. Inicia sesión para participar.
-    </p>
-</div>
-<!-- ===== FIN COMENTARIOS ===== -->
-    <!-- Puedes mantener el resto de tu contenido aquí (sidebar, etc.) -->
+
+    <section class="player">
+
+        <div style="display:flex;align-items:center;gap:15px;">
+
+            <button id="playBtn">▶</button>
+
+            <div style="flex:1;">
+
+                <div id="songTitle">
+                    🎵 Relax
+                </div>
+
+                <div style="margin-top:10px;">
+
+                    <span id="song1" class="etiqueta" style="cursor:pointer;">
+                        Relax
+                    </span>
+
+                    <span id="song2" class="etiqueta" style="cursor:pointer;">
+                        Estudio
+                    </span>
+
+                    <span id="song3" class="etiqueta" style="cursor:pointer;">
+                        Energía
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <audio id="miniPlayer"></audio>
+
+    </section>
+
+    <section class="tarjeta">
+
+        <h2>📚 Últimos artículos</h2>
+
+        <div id="lista-articulos">
+
+            <p style="color:gray;">
+                Cargando artículos...
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="tarjeta">
+
+        <h2>💬 Comentarios</h2>
+
+        <script
+            src="https://utteranc.es/client.js"
+            repo="arnaldomendez5/mi-blog-universitario"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+        </script>
+
+        <p style="margin-top:15px;color:gray;">
+            Inicia sesión con GitHub para dejar un comentario.
+        </p>
+
+    </section>
 
     <footer>
-        <p>© 2026 ArnaldoMéndez</p>
+
+        <p>
+            © 2026 Arnaldo Méndez
+        </p>
+
     </footer>
 
-    <!-- ===== SCRIPT PARA CARGAR ARTÍCULOS ===== -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('entradas/lista.json')
-                .then(res => {
-                    if (!res.ok) throw new Error('No se pudo cargar la lista de artículos');
-                    return res.json();
-                })
-                .then(articulos => {
-                    const contenedor = document.getElementById('lista-articulos');
-                    if (!contenedor) return;
-                    
-                    // Ordenar por fecha (más reciente primero)
-                    articulos.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
-                    
-                    const html = articulos.map(a => `
-                        <article class="post-preview">
-                            <h2><a href="entradas/${a.archivo}">${a.titulo}</a></h2>
-                            <p class="resumen">${a.resumen}</p>
-                            <small class="fecha">📅 ${formatearFecha(a.fecha)}</small>
-                            ${a.etiquetas ? `<div class="etiquetas">${a.etiquetas.map(t => `<span class="etiqueta">#${t}</span>`).join(' ')}</div>` : ''}
-                        </article>
-                    `).join('');
-                    
-                    contenedor.innerHTML = html;
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    const contenedor = document.getElementById('lista-articulos');
-                    if (contenedor) {
-                        contenedor.innerHTML = '<p style="color: #c0392b;">⚠️ No se pudieron cargar los artículos. Intenta más tarde.</p>';
-                    }
-                });
-        });
+</div>
 
-        function formatearFecha(fechaStr) {
-            const fecha = new Date(fechaStr);
-            const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
-            return fecha.toLocaleDateString('es-ES', opciones);
-        }
-    </script>
-    <!-- ===== FIN SCRIPT ===== -->
+<button id="modoOscuro">
+🌙
+</button>
+<script>
+
+// ===============================
+// REPRODUCTOR DE MÚSICA
+// ===============================
+
+const songs = [
+    { name: "Relax", file: "./songs/relax.mp3" },
+    { name: "Estudio", file: "./songs/estudio.mp3" },
+    { name: "Energía", file: "./songs/energia.mp3" }
+];
+
+const player = document.getElementById("miniPlayer");
+const playBtn = document.getElementById("playBtn");
+const songTitle = document.getElementById("songTitle");
+
+let currentSong = 0;
+
+function cargarCancion(i){
+    currentSong = i;
+    player.src = songs[i].file;
+    songTitle.textContent = "🎵 " + songs[i].name;
+}
+
+playBtn.onclick = function(){
+
+    if(player.paused){
+        player.play();
+    }else{
+        player.pause();
+    }
+
+};
+
+player.addEventListener("play",()=>{
+    playBtn.textContent="⏸";
+});
+
+player.addEventListener("pause",()=>{
+    playBtn.textContent="▶";
+});
+
+player.addEventListener("ended",()=>{
+
+    currentSong++;
+
+    if(currentSong>=songs.length){
+
+        currentSong=0;
+
+    }
+
+    cargarCancion(currentSong);
+
+    player.play();
+
+});
+
+document.getElementById("song1").onclick=()=>{
+
+    cargarCancion(0);
+
+    player.play();
+
+};
+
+document.getElementById("song2").onclick=()=>{
+
+    cargarCancion(1);
+
+    player.play();
+
+};
+
+document.getElementById("song3").onclick=()=>{
+
+    cargarCancion(2);
+
+    player.play();
+
+};
+
+cargarCancion(0);
+
+// ===============================
+// CARGAR ARTÍCULOS
+// ===============================
+
+fetch("entradas/lista.json")
+
+.then(r=>r.json())
+
+.then(datos=>{
+
+    datos.sort((a,b)=>new Date(b.fecha)-new Date(a.fecha));
+
+    const lista=document.getElementById("lista-articulos");
+
+    lista.innerHTML="";
+
+    datos.forEach(post=>{
+
+        lista.innerHTML+=`
+
+        <article class="post-preview">
+
+            <h2>
+
+            <a href="entradas/${post.archivo}">
+
+            ${post.titulo}
+
+            </a>
+
+            </h2>
+
+            <p class="resumen">
+
+            ${post.resumen}
+
+            </p>
+
+            <small class="fecha">
+
+            📅 ${new Date(post.fecha).toLocaleDateString("es-ES")}
+
+            </small>
+
+            <div class="etiquetas">
+
+            ${
+                post.etiquetas
+                .map(e=>`<span class="etiqueta">#${e}</span>`)
+                .join("")
+            }
+
+            </div>
+
+        </article>
+
+        `;
+
+    });
+
+})
+
+.catch(()=>{
+
+document.getElementById("lista-articulos").innerHTML=`
+<p>No fue posible cargar los artículos.</p>
+`;
+
+});
+
+// ===============================
+// MODO OSCURO
+// ===============================
+
+const boton=document.getElementById("modoOscuro");
+
+if(localStorage.getItem("modo")=="oscuro"){
+
+document.body.classList.add("dark");
+
+boton.textContent="☀️";
+
+}
+
+boton.onclick=function(){
+
+document.body.classList.toggle("dark");
+
+if(document.body.classList.contains("dark")){
+
+localStorage.setItem("modo","oscuro");
+
+boton.textContent="☀️";
+
+}else{
+
+localStorage.setItem("modo","claro");
+
+boton.textContent="🌙";
+
+}
+
+};
+
+</script>
 
 </body>
 </html>
