@@ -4,55 +4,107 @@
         "titulo": "Las 3 Técnicas de Estudio Científicamente Probadas",
         "resumen": "Descubre cómo mejorar tu rendimiento académico usando Active Recall y organización del tiempo.",
         "fecha": "2026-07-13",
-        "etiquetas": ["estudio", "productividad"]
+        "etiquetas": [
+            "estudio",
+            "productividad"
+        ]
     },
     {
         "archivo": "barrancas-neuquen.html",
-        "titulo": "🏜️ Barrancas de Neuquén: Un Paraíso Natural en la Patagonia",
+        "titulo": "🏜 Barrancas de Neuquén: Un Paraíso Natural en la Patagonia",
         "resumen": "Guía completa para visitar las Barrancas de Neuquén: cómo llegar, qué ver, mejor época y consejos para esta joya poco conocida de la Patagonia.",
         "fecha": "2026-07-13",
-        "etiquetas": ["viajes", "neuquén", "patagonia", "naturaleza"]
+        "etiquetas": [
+            "viajes",
+            "neuquén",
+            "patagonia",
+            "naturaleza"
+        ]
     },
     {
         "archivo": "prevencion-accidentes.html",
         "titulo": "🚗 Prevención de Accidentes Automovilísticos: Guía para Conductores",
         "resumen": "Consejos prácticos para prevenir accidentes de tránsito. Estadísticas, factores de riesgo, medidas preventivas y protocolo de emergencia.",
         "fecha": "2026-07-13",
-        "etiquetas": ["seguridad", "conducción", "prevención", "viales"]
+        "etiquetas": [
+            "seguridad",
+            "conducción",
+            "prevención",
+            "viales"
+        ]
     },
     {
         "archivo": "musica-y-mente.html",
         "titulo": "🎵 Música y Mente: El Poder Terapéutico de la Música",
         "resumen": "Descubre cómo la música afecta tu cerebro, reduce el estrés, mejora la memoria y potencia tu bienestar emocional. Incluye playlist recomendada.",
         "fecha": "2026-07-13",
-        "etiquetas": ["música", "psicología", "bienestar", "cerebro"]
+        "etiquetas": [
+            "música",
+            "psicología",
+            "bienestar",
+            "cerebro"
+        ]
     },
     {
         "archivo": "que-es-una-rave.html",
         "titulo": "🎵 ¿Qué es una Rave? Historia, Filosofía y Cultura",
         "resumen": "Descubre qué es una rave, su origen en el Londres de los 80, la filosofía PLUR, sus características y por qué genera tanta fascinación (y controversia).",
         "fecha": "2026-07-14",
-        "etiquetas": ["música", "cultura", "historia", "electrónica", "rave"]
+        "etiquetas": [
+            "música",
+            "cultura",
+            "historia",
+            "electrónica",
+            "rave"
+        ]
     },
     {
         "archivo": "ciberestafas.html",
         "titulo": "Ciberestafas: cómo identificarlas y protegerte",
         "resumen": "Guía práctica sobre los tipos más comunes de estafas digitales, cómo reconocerlas y cómo protegerte.",
         "fecha": "2026-07-15",
-        "etiquetas": ["seguridad", "ciberestafas", "phishing"]
+        "etiquetas": [
+            "seguridad",
+            "ciberestafas",
+            "phishing"
+        ]
     },
     {
         "archivo": "maradona-historia.html",
         "titulo": "⚽ Diego Maradona: Historia Completa del Dios del Fútbol",
         "resumen": "Repaso por la vida y carrera de Maradona: sus inicios en Villa Fiorito, el paso por Boca, el 'Fútbol Champagne' en el Napoli, la gloria en el Mundial '86, sus polémicas y su eterno legado.",
         "fecha": "2026-07-15",
-        "etiquetas": ["fútbol", "deportes", "historia", "argentina", "maradona"]
+        "etiquetas": [
+            "fútbol",
+            "deportes",
+            "historia",
+            "argentina",
+            "maradona"
+        ]
     },
     {
-        "archivo": "fotos.html",
-        "titulo": "📸 Galería de Imágenes",
-        "resumen": "Colección de fotos destacadas del blog universitario",
-        "fecha": "2026-07-15",
-        "etiquetas": ["fotos", "galería", "imágenes"]
+        "archivo": "historia-del-rock-nacional-argentino.html",
+        "titulo": "Historia del Rock Nacional Argentino",
+        "resumen": "El rock nacional argentino es uno de los movimientos culturales más importantes del país. Desde sus orígenes en los años sesenta hasta la actualidad, ha influido en generaciones de músicos y seguidores.",
+        "fecha": "2026-07-24",
+        "etiquetas": [
+            "rock",
+            "argentina",
+            "música",
+            "cultura",
+            "historia"
+        ]
+    },
+    {
+        "archivo": "historia-de-linux-y-el-software-libre.html",
+        "titulo": "Historia de Linux y el Software Libre",
+        "resumen": "Linux nació como un proyecto de código abierto que permitió a millones de personas estudiar, modificar y compartir software. Su filosofía basada en la colaboración transformó el mundo de la informática.",
+        "fecha": "2026-07-24",
+        "etiquetas": [
+            "linux",
+            "software libre",
+            "código abierto",
+            "informática"
+        ]
     }
 ]
