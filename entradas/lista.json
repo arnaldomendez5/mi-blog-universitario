@@ -106,5 +106,18 @@
             "código abierto",
             "informática"
         ]
+    },
+    {
+        "archivo": "el-problema-del-mundo.html",
+        "titulo": "EL PROBLEMA DEL MUNDO",
+        "resumen": "LOS PROBLEMAS DEBEN DESAPARECER",
+        "fecha": "2026-07-25",
+        "etiquetas": [
+            "NADA",
+            "TODO",
+            "POCO",
+            "MUCHO",
+            ""
+        ]
     }
 ]
