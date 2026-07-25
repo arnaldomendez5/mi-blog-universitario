@@ -160,5 +160,21 @@
         "imagen": "",
         "contenido": "Linux nació como un proyecto de código abierto que permitió a millones de personas estudiar, modificar y compartir software. Su filosofía basada en la colaboración transformó el mundo de la informática.",
         "tags": "linux, software libre, código abierto, informática"
+    },
+    {
+        "slug": "sistema-linfatico",
+        "archivo": "sistema-linfatico.html",
+        "titulo": "SISTEMA LINFÀTICO",
+        "autor": "WIKIPEDIA",
+        "categoria": "CIENCIA",
+        "imagen": "/home/a/mi-blog-universitario/img/SISTEMA.jpg",
+        "resumen": "El sistema linfático es la estructura anatómica que transporta la linfa. Guarda algunas similitudes con el aparato circulatorio, pero el líquido que se transporta no es sangre, sino linfa. No es un si",
+        "contenido": "El sistema linfático es la estructura anatómica que transporta la linfa. Guarda algunas similitudes con el aparato circulatorio, pero el líquido que se transporta no es sangre, sino linfa. No es un sistema cerrado, se inicia en los tejidos corporales, continúa por los vasos linfáticos que aumentan de tamaño progresivamente hasta converger en el conducto torácico o en el conducto linfático derecho, ambos desembocan en el sistema venoso en el punto de unión entre la vena subclavia y la vena yugular interna, cada uno en un lado. El sistema linfático constituye la segunda red de transporte de líquidos corporales, algunos autores lo consideran como una parte del aparato circulatorio. La linfa es un líquido de aspecto transparente y color blanquecino que recorre los vasos linfáticos y generalmente carece de pigmentos, se produce a partir del exceso de líquido que sale de los capilares sanguíneos al espacio intersticial y es recogido y transportado por los capilares linfáticos que drenan a vasos linfáticos más gruesos.",
+        "fecha": "2026-07-25",
+        "tags": "SISTEMA, LINFÀTICO",
+        "etiquetas": [
+            "SISTEMA",
+            "LINFÀTICO"
+        ]
     }
 ]
