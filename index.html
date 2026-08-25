@@ -267,6 +267,27 @@
             border-color: #ff1744;
         }
 
+        .galeria-vermas {
+            display: block;
+            width: fit-content;
+            margin: 1.5rem auto 0;
+            background: transparent;
+            border: 2px solid #ff1744;
+            color: #ff1744;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1rem;
+            padding: 0.7rem 2rem;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .galeria-vermas:hover {
+            background: #ff1744;
+            color: #000;
+        }
+
         /* Lightbox */
         .lightbox {
             display: none;
@@ -534,6 +555,7 @@
             <div class="galeria-grid" id="galeria-grid">
                 <!-- Las imágenes se cargan desde JS -->
             </div>
+            <a href="galeria.html" class="galeria-vermas">Ver más →</a>
         </section>
 
         <!-- ARTÍCULOS -->
@@ -644,7 +666,8 @@
         const lightboxImg = document.getElementById("lightbox-img");
         const lightboxCerrar = document.getElementById("lightbox-cerrar");
 
-        imagenesGaleria.forEach(ruta => {
+        // En el inicio solo mostramos un adelanto; el resto está en galeria.html
+        imagenesGaleria.slice(0, 4).forEach(ruta => {
             const item = document.createElement("div");
             item.className = "galeria-item";
             item.innerHTML = `<img src="${ruta}" alt="Foto de la galería" loading="lazy">`;
