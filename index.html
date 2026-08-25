@@ -232,62 +232,114 @@
         }
 
         /* ============================================================
+           GALERÍA DE IMÁGENES
+           ============================================================ */
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 0.8rem;
+        }
+
+        .galeria-item {
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #2a2a2a;
+            aspect-ratio: 1 / 1;
+            cursor: pointer;
+            background: #000;
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: grayscale(15%) contrast(110%);
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .galeria-item:hover img {
+            transform: scale(1.08);
+            filter: grayscale(0%) contrast(115%);
+        }
+
+        .galeria-item:hover {
+            border-color: #ff1744;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.92);
+            z-index: 999;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .lightbox.activo {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 100%;
+            max-height: 85vh;
+            border: 3px solid #ff1744;
+            box-shadow: 0 0 60px rgba(255, 23, 68, 0.3);
+        }
+
+        .lightbox-cerrar {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            color: #fff;
+            background: transparent;
+            border: 2px solid #ff1744;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            font-family: 'Impact', sans-serif;
+        }
+
+        .lightbox-cerrar:hover {
+            background: #ff1744;
+            color: #000;
+        }
+
+        /* ============================================================
            LISTA DE ARTÍCULOS – GRILLA AGRESIVA
            ============================================================ */
         #lista-articulos {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 1rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
         }
 
         .post-preview {
-            background: #121212;
+            background: #0d0d0d;
             border: 2px solid #2a2a2a;
-            padding: 1.8rem 1.5rem;
-            transition: all 0.2s ease;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            border-radius: 0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            padding: 1.5rem;
+            transition: 0.2s;
         }
 
         .post-preview:hover {
             border-color: #ff1744;
-            transform: scale(1.02) translateY(-5px);
-            box-shadow: 0 12px 40px rgba(255, 23, 68, 0.2);
-            background: #1a1a1a;
-        }
-
-        .post-preview::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: #ff1744;
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .post-preview:hover::before {
-            transform: scaleX(1);
+            transform: translateY(-3px);
         }
 
         .post-preview h2 {
-            font-size: 1.6rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            line-height: 1.2;
+            font-size: 1.3rem;
+            border: none;
+            padding: 0;
             margin-bottom: 0.6rem;
         }
 
         .post-preview h2 a {
             color: #fff;
             text-decoration: none;
-            transition: 0.2s;
         }
 
         .post-preview h2 a:hover {
@@ -296,23 +348,23 @@
 
         .post-preview .resumen {
             font-family: 'Segoe UI', Roboto, sans-serif;
+            color: #999;
             font-size: 0.95rem;
-            color: #aaa;
-            line-height: 1.6;
-            margin-bottom: 1.2rem;
-            flex: 1;
+            margin-bottom: 1rem;
         }
 
         .post-preview .meta {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            border-top: 2px solid #1f1f1f;
-            padding-top: 0.8rem;
+            gap: 0.5rem;
+        }
+
+        .post-preview .fecha {
             font-family: 'Courier New', monospace;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             color: #666;
-            text-transform: uppercase;
         }
 
         .post-preview .etiquetas {
@@ -321,108 +373,53 @@
             gap: 0.4rem;
         }
 
-        .post-preview .etiquetas .etiqueta {
-            background: #1f1f1f;
-            border: 1px solid #2a2a2a;
-            padding: 0.1rem 0.7rem;
-            font-size: 0.65rem;
-            color: #aaa;
-            transition: 0.2s;
-            font-family: 'Impact', sans-serif;
-            letter-spacing: 0.3px;
-            text-transform: lowercase;
-        }
-
-        .post-preview .etiquetas .etiqueta:hover {
-            border-color: #ff1744;
-            color: #fff;
-        }
-
-        .post-preview .fecha {
-            color: #555;
+        .post-preview .etiqueta {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 0.15rem 0.7rem;
             font-size: 0.7rem;
+            color: #ff1744;
+            font-family: 'Impact', sans-serif;
         }
 
         /* ============================================================
-           COMENTARIOS (UTTERANCES)
+           COMENTARIOS
            ============================================================ */
         .comentarios {
-            margin-top: 2.5rem;
-        }
-        .comentarios p {
-            font-family: 'Segoe UI', sans-serif;
-            color: #666;
-            font-size: 0.9rem;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            color: #999;
         }
 
         /* ============================================================
            FOOTER
            ============================================================ */
         .footer {
-            margin-top: 3rem;
-            border-top: 3px solid #1f1f1f;
-            padding: 1.5rem 0;
+            width: 100%;
+            max-width: 1200px;
             text-align: center;
+            padding: 2rem 0 1rem;
+            color: #555;
             font-family: 'Courier New', monospace;
-            font-size: 0.8rem;
-            color: #444;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .footer strong {
-            color: #ff1744;
+            font-size: 0.85rem;
         }
 
         /* ============================================================
-           BOTÓN MODO OSCURO (siempre visible)
+           BOTÓN MODO OSCURO (toggle)
            ============================================================ */
         #modoOscuro {
             position: fixed;
-            right: 20px;
-            bottom: 20px;
-            width: 60px;
-            height: 60px;
-            border: 3px solid #ff1744;
-            border-radius: 0;
-            background: #0d0d0d;
-            color: #ff1744;
-            font-size: 1.8rem;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 2px solid #ff1744;
+            background: #111;
+            color: #fff;
+            font-size: 1.4rem;
             cursor: pointer;
-            box-shadow: 0 0 30px rgba(255, 23, 68, 0.15);
-            transition: 0.2s;
-            z-index: 999;
-        }
-
-        #modoOscuro:hover {
-            background: #ff1744;
-            color: #000;
-        }
-
-        /* ============================================================
-           MODO OSCURO (ya está oscuro, pero lo dejamos para alternar)
-           ============================================================ */
-        body.dark {
-            background: #050505;
-            background-image:
-                repeating-linear-gradient(0deg, #111 1px, transparent 1px),
-                repeating-linear-gradient(90deg, #111 1px, transparent 1px);
-        }
-
-        body.dark .tarjeta,
-        body.dark .post-preview,
-        body.dark .player,
-        body.dark .nav {
-            background: #0a0a0a;
-            border-color: #222;
-        }
-
-        body.dark .post-preview h2 a {
-            color: #eee;
-        }
-
-        body.dark .post-preview .resumen {
-            color: #888;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
         }
 
         /* ============================================================
@@ -438,6 +435,10 @@
             #lista-articulos {
                 grid-template-columns: 1fr;
             }
+            .galeria-grid {
+                grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+                gap: 0.5rem;
+            }
             .nav {
                 gap: 1.2rem;
                 padding: 0.6rem 1rem;
@@ -452,6 +453,10 @@
             .player button {
                 width: 100%;
                 height: 50px;
+            }
+            .lightbox-cerrar {
+                top: 0.6rem;
+                right: 0.6rem;
             }
         }
 
@@ -493,6 +498,7 @@
     ============================================================ -->
     <nav class="nav">
         <a href="index.html">🏠 Inicio</a>
+        <a href="#galeria">🖼️ Galería</a>
         <a href="contacto.html">📧 Contacto</a>
         <a href="privacidad.html">🔒 Privacidad</a>
     </nav>
@@ -522,6 +528,14 @@
             <audio id="miniPlayer"></audio>
         </section>
 
+        <!-- GALERÍA -->
+        <section class="tarjeta" id="galeria">
+            <h2>🖼️ Galería</h2>
+            <div class="galeria-grid" id="galeria-grid">
+                <!-- Las imágenes se cargan desde JS -->
+            </div>
+        </section>
+
         <!-- ARTÍCULOS -->
         <section class="tarjeta" style="border-color:#333;">
             <h2>⚡ Últimos artículos</h2>
@@ -548,6 +562,14 @@
         <footer class="footer">
             <p>© 2026 <strong>N4N01944</strong> · </p>
         </footer>
+    </div>
+
+    <!-- ============================================================
+    LIGHTBOX (VISOR AMPLIADO)
+    ============================================================ -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-cerrar" id="lightbox-cerrar">✕</button>
+        <img src="" alt="Imagen ampliada" id="lightbox-img" />
     </div>
 
     <!-- ============================================================
@@ -604,6 +626,47 @@
             player.play(); };
 
         cargarCancion(0);
+
+        // ===============================
+        // GALERÍA DE IMÁGENES (carpeta img/)
+        // ===============================
+        // Agregá el nombre de archivo acá cada vez que subas una foto nueva a img/
+        const imagenesGaleria = [
+            "img/file_000000009540720eba54e16e68d6cd7b.png",
+            "img/WORLD.JPG",
+            "img/SISTEMA.jpg",
+            "img/free-photo-of-rave-lasers(1).jpg",
+            "img/camino-barrancas-neuquen.jpg"
+        ];
+
+        const galeriaGrid = document.getElementById("galeria-grid");
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const lightboxCerrar = document.getElementById("lightbox-cerrar");
+
+        imagenesGaleria.forEach(ruta => {
+            const item = document.createElement("div");
+            item.className = "galeria-item";
+            item.innerHTML = `<img src="${ruta}" alt="Foto de la galería" loading="lazy">`;
+            item.onclick = () => {
+                lightboxImg.src = ruta;
+                lightbox.classList.add("activo");
+            };
+            galeriaGrid.appendChild(item);
+        });
+
+        function cerrarLightbox() {
+            lightbox.classList.remove("activo");
+            lightboxImg.src = "";
+        }
+
+        lightboxCerrar.onclick = cerrarLightbox;
+        lightbox.onclick = (e) => {
+            if (e.target === lightbox) cerrarLightbox();
+        };
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") cerrarLightbox();
+        });
 
         // ===============================
         // CARGAR ARTÍCULOS DESDE lista.json
