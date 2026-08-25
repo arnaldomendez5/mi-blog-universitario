@@ -176,5 +176,24 @@
             "SISTEMA",
             "LINFÀTICO"
         ]
+    },
+    {
+        "archivo": "camino-barrancas-neuquen.html",
+        "titulo": "🏔️ El camino hacia las Barrancas: Geografía de la Puna Neuquina",
+        "resumen": "Un vistazo geográfico al paisaje árido y volcánico del camino de tierra hacia las Barrancas de Neuquén, con foto propia del recorrido.",
+        "fecha": "2026-08-25",
+        "etiquetas": [
+            "geografía",
+            "neuquén",
+            "patagonia",
+            "naturaleza",
+            "viajes"
+        ],
+        "slug": "camino-barrancas-neuquen",
+        "autor": "",
+        "categoria": "",
+        "imagen": "../img/camino-barrancas-neuquen.jpg",
+        "contenido": "Un vistazo geográfico al paisaje árido y volcánico del camino de tierra hacia las Barrancas de Neuquén, con foto propia del recorrido.",
+        "tags": "geografía, neuquén, patagonia, naturaleza, viajes"
     }
 ]
