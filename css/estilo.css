@@ -38,3 +38,12 @@
     color:#555;
     line-height:1.5;
 }
+.luz-led {
+  filter: drop-shadow(0 0 6px #F0997B);
+  animation: parpadeo 1.8s ease-in-out infinite;
+}
+
+@keyframes parpadeo {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}

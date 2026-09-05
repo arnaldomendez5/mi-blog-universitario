@@ -1,212 +1,218 @@
 [
-    {
-        "archivo": "tecnicas_de_estudio.html",
-        "titulo": "Las 3 Técnicas de Estudio Científicamente Probadas",
-        "resumen": "Descubre cómo mejorar tu rendimiento académico usando Active Recall y organización del tiempo.",
-        "fecha": "2026-07-13",
-        "etiquetas": [
-            "estudio",
-            "productividad"
-        ],
-        "slug": "tecnicas_de_estudio",
-        "autor": "",
-        "categoria": "",
-        "imagen": "",
-        "contenido": "Descubre cómo mejorar tu rendimiento académico usando Active Recall y organización del tiempo.",
-        "tags": "estudio, productividad"
-    },
-    {
-        "archivo": "capacitores.html",
-        "titulo": "Capacitores: carga, energía y circuitos RC",
-        "resumen": "Capacitancia, energía almacenada y circuitos RC de carga/descarga.",
-        "fecha": "2026-09-04",
-        "etiquetas": ["biofísica", "electricidad"],
-        "slug": "capacitores",
-        "autor": "Arnaldo",
-        "categoria": "biofísica",
-        "imagen": "",
-        "contenido": "",
-        "tags": ["capacitores", "circuitos"]
-    },
-    {
-        "archivo": "barrancas-neuquen.html",
-        "titulo": "🏜 Barrancas,  Neuquén: Un Paraíso Natural en la Patagonia",
-        "resumen": "Guía completa para visitar  Barrancas Neuquén: cómo llegar, qué ver, mejor época y consejos para esta joya poco conocida de la Patagonia.",
-        "fecha": "2026-07-13",
-        "etiquetas": [
-            "viajes",
-            "neuquén",
-            "patagonia",
-            "naturaleza"
-        ],
-        "slug": "barrancas-neuquen",
-        "autor": "",
-        "categoria": "",
-        "imagen": "",
-        "contenido": "Guía completa para visitar  Barrancas Neuquén: cómo llegar, qué ver, mejor época y consejos para esta joya poco conocida de la Patagonia.",
-        "tags": "viajes, neuquén, patagonia, naturaleza"
-    },
-    {
-        "archivo": "prevencion-accidentes.html",
-        "titulo": "🚗 Prevención de Accidentes Automovilísticos: Guía para Conductores",
-        "resumen": "Consejos prácticos para prevenir accidentes de tránsito. Estadísticas, factores de riesgo, medidas preventivas y protocolo de emergencia.",
-        "fecha": "2026-07-13",
-        "etiquetas": [
-            "seguridad",
-            "conducción",
-            "prevención",
-            "viales"
-        ],
-        "slug": "prevencion-accidentes",
-        "autor": "",
-        "categoria": "",
-        "imagen": "",
-        "contenido": "Consejos prácticos para prevenir accidentes de tránsito. Estadísticas, factores de riesgo, medidas preventivas y protocolo de emergencia.",
-        "tags": "seguridad, conducción, prevención, viales"
-    },
-    {
-        "archivo": "musica-y-mente.html",
-        "titulo": "🎵 Música y Mente: El Poder Terapéutico de la Música",
-        "resumen": "Descubre cómo la música afecta tu cerebro, reduce el estrés, mejora la memoria y potencia tu bienestar emocional. Incluye playlist recomendada.",
-        "fecha": "2026-07-13",
-        "etiquetas": [
-            "música",
-            "psicología",
-            "bienestar",
-            "cerebro"
-        ],
-        "slug": "musica-y-mente",
-        "autor": "",
-        "categoria": "",
-        "imagen": "",
-        "contenido": "Descubre cómo la música afecta tu cerebro, reduce el estrés, mejora la memoria y potencia tu bienestar emocional. Incluye playlist recomendada.",
-        "tags": "música, psicología, bienestar, cerebro"
-    },
-    {
-        "archivo": "que-es-una-rave.html",
-        "titulo": "🎵 ¿Qué es una Rave? Historia, Filosofía y Cultura",
-        "resumen": "Descubre qué es una rave, su origen en el Londres de los 80, la filosofía PLUR, sus características y por qué genera tanta fascinación (y controversia).",
-        "fecha": "2026-07-14",
-        "etiquetas": [
-            "música",
-            "cultura",
-            "historia",
-            "electrónica",
-            "rave"
-        ],
-        "slug": "que-es-una-rave",
-        "autor": "",
-        "categoria": "",
-        "imagen": "",
-        "contenido": "Descubre qué es una rave, su origen en el Londres de los 80, la filosofía PLUR, sus características y por qué genera tanta fascinación (y controversia).",
-        "tags": "música, cultura, historia, electrónica, rave"
-    },
-    {
-        "archivo": "ciberestafas.html",
-        "titulo": "Ciberestafas: cómo identificarlas y protegerte",
-        "resumen": "Guía práctica sobre los tipos más comunes de estafas digitales, cómo reconocerlas y cómo protegerte.",
-        "fecha": "2026-07-15",
-        "etiquetas": [
-            "seguridad",
-            "ciberestafas",
-            "phishing"
-        ],
-        "slug": "ciberestafas",
-        "autor": "",
-        "categoria": "",
-        "imagen": "",
-        "contenido": "Guía práctica sobre los tipos más comunes de estafas digitales, cómo reconocerlas y cómo protegerte.",
-        "tags": "seguridad, ciberestafas, phishing"
-    },
-    {
-        "archivo": "maradona-historia.html",
-        "titulo": "⚽ Diego Maradona: Historia Completa del Dios del Fútbol",
-        "resumen": "Repaso por la vida y carrera de Maradona: sus inicios en Villa Fiorito, el paso por Boca, el 'Fútbol Champagne' en el Napoli, la gloria en el Mundial '86, sus polémicas y su eterno legado.",
-        "fecha": "2026-07-15",
-        "etiquetas": [
-            "fútbol",
-            "deportes",
-            "historia",
-            "argentina",
-            "maradona"
-        ],
-        "slug": "maradona-historia",
-        "autor": "",
-        "categoria": "",
-        "imagen": "",
-        "contenido": "Repaso por la vida y carrera de Maradona: sus inicios en Villa Fiorito, el paso por Boca, el 'Fútbol Champagne' en el Napoli, la gloria en el Mundial '86, sus polémicas y su eterno legado.",
-        "tags": "fútbol, deportes, historia, argentina, maradona"
-    },
-    {
-        "archivo": "historia-del-rock-nacional-argentino.html",
-        "titulo": "Historia del Rock Nacional Argentino",
-        "resumen": "El rock nacional argentino es uno de los movimientos culturales más importantes del país. Desde sus orígenes en los años sesenta hasta la actualidad, ha influido en generaciones de músicos y seguidores.",
-        "fecha": "2026-07-24",
-        "etiquetas": [
-            "rock",
-            "argentina",
-            "música",
-            "cultura",
-            "historia"
-        ],
-        "slug": "historia-del-rock-nacional-argentino",
-        "autor": "",
-        "categoria": "",
-        "imagen": "",
-        "contenido": "El rock nacional argentino es uno de los movimientos culturales más importantes del país. Desde sus orígenes en los años sesenta hasta la actualidad, ha influido en generaciones de músicos y seguidores.",
-        "tags": "rock, argentina, música, cultura, historia"
-    },
-    {
-        "archivo": "historia-de-linux-y-el-software-libre.html",
-        "titulo": "Historia de Linux y el Software Libre",
-        "resumen": "Linux nació como un proyecto de código abierto que permitió a millones de personas estudiar, modificar y compartir software. Su filosofía basada en la colaboración transformó el mundo de la informática.",
-        "fecha": "2026-07-24",
-        "etiquetas": [
-            "linux",
-            "software libre",
-            "código abierto",
-            "informática"
-        ],
-        "slug": "historia-de-linux-y-el-software-libre",
-        "autor": "",
-        "categoria": "",
-        "imagen": "",
-        "contenido": "Linux nació como un proyecto de código abierto que permitió a millones de personas estudiar, modificar y compartir software. Su filosofía basada en la colaboración transformó el mundo de la informática.",
-        "tags": "linux, software libre, código abierto, informática"
-    },
-    {
-        "slug": "sistema-linfatico",
-        "archivo": "sistema-linfatico.html",
-        "titulo": "SISTEMA LINFÀTICO",
-        "autor": "WIKIPEDIA",
-        "categoria": "CIENCIA",
-        "imagen": "/home/a/mi-blog-universitario/img/SISTEMA.jpg",
-        "resumen": "El sistema linfático es la estructura anatómica que transporta la linfa. Guarda algunas similitudes con el aparato circulatorio, pero el líquido que se transporta no es sangre, sino linfa. No es un si",
-        "contenido": "El sistema linfático es la estructura anatómica que transporta la linfa. Guarda algunas similitudes con el aparato circulatorio, pero el líquido que se transporta no es sangre, sino linfa. No es un sistema cerrado, se inicia en los tejidos corporales, continúa por los vasos linfáticos que aumentan de tamaño progresivamente hasta converger en el conducto torácico o en el conducto linfático derecho, ambos desembocan en el sistema venoso en el punto de unión entre la vena subclavia y la vena yugular interna, cada uno en un lado. El sistema linfático constituye la segunda red de transporte de líquidos corporales, algunos autores lo consideran como una parte del aparato circulatorio. La linfa es un líquido de aspecto transparente y color blanquecino que recorre los vasos linfáticos y generalmente carece de pigmentos, se produce a partir del exceso de líquido que sale de los capilares sanguíneos al espacio intersticial y es recogido y transportado por los capilares linfáticos que drenan a vasos linfáticos más gruesos.",
-        "fecha": "2026-07-25",
-        "tags": "SISTEMA, LINFÀTICO",
-        "etiquetas": [
-            "SISTEMA",
-            "LINFÀTICO"
-        ]
-    },
-    {
-        "archivo": "camino-barrancas-neuquen.html",
-        "titulo": "🏔️ El camino hacia las Barrancas: Geografía de la Puna Neuquina",
-        "resumen": "Un vistazo geográfico al paisaje árido y volcánico del camino de tierra hacia las Barrancas de Neuquén, con foto propia del recorrido.",
-        "fecha": "2026-08-25",
-        "etiquetas": [
-            "geografía",
-            "neuquén",
-            "patagonia",
-            "naturaleza",
-            "viajes"
-        ],
-        "slug": "camino-barrancas-neuquen",
-        "autor": "",
-        "categoria": "",
-        "imagen": "../img/camino-barrancas-neuquen.jpg",
-        "contenido": "Un vistazo geográfico al paisaje árido y volcánico del camino de tierra hacia las Barrancas de Neuquén, con foto propia del recorrido.",
-        "tags": "geografía, neuquén, patagonia, naturaleza, viajes"
-    }
+  {
+    "archivo": "tecnicas_de_estudio.html",
+    "titulo": "Las 3 Técnicas de Estudio Científicamente Probadas",
+    "resumen": "Descubre cómo mejorar tu rendimiento académico usando Active Recall y organización del tiempo.",
+    "fecha": "2026-07-13",
+    "etiquetas": [
+      "estudio",
+      "productividad"
+    ],
+    "slug": "tecnicas_de_estudio",
+    "autor": "",
+    "categoria": "",
+    "imagen": "",
+    "contenido": "Descubre cómo mejorar tu rendimiento académico usando Active Recall y organización del tiempo.",
+    "tags": "estudio, productividad"
+  },
+  {
+    "archivo": "capacitores.html",
+    "titulo": "Capacitores: carga, energía y circuitos RC",
+    "resumen": "Capacitancia, energía almacenada y circuitos RC de carga/descarga.",
+    "fecha": "2026-09-04",
+    "etiquetas": [
+      "biofísica",
+      "electricidad"
+    ],
+    "slug": "capacitores",
+    "autor": "Arnaldo",
+    "categoria": "biofísica",
+    "imagen": "assets/img/capacitores-luces.svg",
+    "contenido": "",
+    "tags": [
+      "capacitores",
+      "circuitos"
+    ]
+  },
+  {
+    "archivo": "barrancas-neuquen.html",
+    "titulo": "🏜 Barrancas,  Neuquén: Un Paraíso Natural en la Patagonia",
+    "resumen": "Guía completa para visitar  Barrancas Neuquén: cómo llegar, qué ver, mejor época y consejos para esta joya poco conocida de la Patagonia.",
+    "fecha": "2026-07-13",
+    "etiquetas": [
+      "viajes",
+      "neuquén",
+      "patagonia",
+      "naturaleza"
+    ],
+    "slug": "barrancas-neuquen",
+    "autor": "",
+    "categoria": "",
+    "imagen": "",
+    "contenido": "Guía completa para visitar  Barrancas Neuquén: cómo llegar, qué ver, mejor época y consejos para esta joya poco conocida de la Patagonia.",
+    "tags": "viajes, neuquén, patagonia, naturaleza"
+  },
+  {
+    "archivo": "prevencion-accidentes.html",
+    "titulo": "🚗 Prevención de Accidentes Automovilísticos: Guía para Conductores",
+    "resumen": "Consejos prácticos para prevenir accidentes de tránsito. Estadísticas, factores de riesgo, medidas preventivas y protocolo de emergencia.",
+    "fecha": "2026-07-13",
+    "etiquetas": [
+      "seguridad",
+      "conducción",
+      "prevención",
+      "viales"
+    ],
+    "slug": "prevencion-accidentes",
+    "autor": "",
+    "categoria": "",
+    "imagen": "",
+    "contenido": "Consejos prácticos para prevenir accidentes de tránsito. Estadísticas, factores de riesgo, medidas preventivas y protocolo de emergencia.",
+    "tags": "seguridad, conducción, prevención, viales"
+  },
+  {
+    "archivo": "musica-y-mente.html",
+    "titulo": "🎵 Música y Mente: El Poder Terapéutico de la Música",
+    "resumen": "Descubre cómo la música afecta tu cerebro, reduce el estrés, mejora la memoria y potencia tu bienestar emocional. Incluye playlist recomendada.",
+    "fecha": "2026-07-13",
+    "etiquetas": [
+      "música",
+      "psicología",
+      "bienestar",
+      "cerebro"
+    ],
+    "slug": "musica-y-mente",
+    "autor": "",
+    "categoria": "",
+    "imagen": "",
+    "contenido": "Descubre cómo la música afecta tu cerebro, reduce el estrés, mejora la memoria y potencia tu bienestar emocional. Incluye playlist recomendada.",
+    "tags": "música, psicología, bienestar, cerebro"
+  },
+  {
+    "archivo": "que-es-una-rave.html",
+    "titulo": "🎵 ¿Qué es una Rave? Historia, Filosofía y Cultura",
+    "resumen": "Descubre qué es una rave, su origen en el Londres de los 80, la filosofía PLUR, sus características y por qué genera tanta fascinación (y controversia).",
+    "fecha": "2026-07-14",
+    "etiquetas": [
+      "música",
+      "cultura",
+      "historia",
+      "electrónica",
+      "rave"
+    ],
+    "slug": "que-es-una-rave",
+    "autor": "",
+    "categoria": "",
+    "imagen": "",
+    "contenido": "Descubre qué es una rave, su origen en el Londres de los 80, la filosofía PLUR, sus características y por qué genera tanta fascinación (y controversia).",
+    "tags": "música, cultura, historia, electrónica, rave"
+  },
+  {
+    "archivo": "ciberestafas.html",
+    "titulo": "Ciberestafas: cómo identificarlas y protegerte",
+    "resumen": "Guía práctica sobre los tipos más comunes de estafas digitales, cómo reconocerlas y cómo protegerte.",
+    "fecha": "2026-07-15",
+    "etiquetas": [
+      "seguridad",
+      "ciberestafas",
+      "phishing"
+    ],
+    "slug": "ciberestafas",
+    "autor": "",
+    "categoria": "",
+    "imagen": "",
+    "contenido": "Guía práctica sobre los tipos más comunes de estafas digitales, cómo reconocerlas y cómo protegerte.",
+    "tags": "seguridad, ciberestafas, phishing"
+  },
+  {
+    "archivo": "maradona-historia.html",
+    "titulo": "⚽ Diego Maradona: Historia Completa del Dios del Fútbol",
+    "resumen": "Repaso por la vida y carrera de Maradona: sus inicios en Villa Fiorito, el paso por Boca, el 'Fútbol Champagne' en el Napoli, la gloria en el Mundial '86, sus polémicas y su eterno legado.",
+    "fecha": "2026-07-15",
+    "etiquetas": [
+      "fútbol",
+      "deportes",
+      "historia",
+      "argentina",
+      "maradona"
+    ],
+    "slug": "maradona-historia",
+    "autor": "",
+    "categoria": "",
+    "imagen": "",
+    "contenido": "Repaso por la vida y carrera de Maradona: sus inicios en Villa Fiorito, el paso por Boca, el 'Fútbol Champagne' en el Napoli, la gloria en el Mundial '86, sus polémicas y su eterno legado.",
+    "tags": "fútbol, deportes, historia, argentina, maradona"
+  },
+  {
+    "archivo": "historia-del-rock-nacional-argentino.html",
+    "titulo": "Historia del Rock Nacional Argentino",
+    "resumen": "El rock nacional argentino es uno de los movimientos culturales más importantes del país. Desde sus orígenes en los años sesenta hasta la actualidad, ha influido en generaciones de músicos y seguidores.",
+    "fecha": "2026-07-24",
+    "etiquetas": [
+      "rock",
+      "argentina",
+      "música",
+      "cultura",
+      "historia"
+    ],
+    "slug": "historia-del-rock-nacional-argentino",
+    "autor": "",
+    "categoria": "",
+    "imagen": "",
+    "contenido": "El rock nacional argentino es uno de los movimientos culturales más importantes del país. Desde sus orígenes en los años sesenta hasta la actualidad, ha influido en generaciones de músicos y seguidores.",
+    "tags": "rock, argentina, música, cultura, historia"
+  },
+  {
+    "archivo": "historia-de-linux-y-el-software-libre.html",
+    "titulo": "Historia de Linux y el Software Libre",
+    "resumen": "Linux nació como un proyecto de código abierto que permitió a millones de personas estudiar, modificar y compartir software. Su filosofía basada en la colaboración transformó el mundo de la informática.",
+    "fecha": "2026-07-24",
+    "etiquetas": [
+      "linux",
+      "software libre",
+      "código abierto",
+      "informática"
+    ],
+    "slug": "historia-de-linux-y-el-software-libre",
+    "autor": "",
+    "categoria": "",
+    "imagen": "",
+    "contenido": "Linux nació como un proyecto de código abierto que permitió a millones de personas estudiar, modificar y compartir software. Su filosofía basada en la colaboración transformó el mundo de la informática.",
+    "tags": "linux, software libre, código abierto, informática"
+  },
+  {
+    "slug": "sistema-linfatico",
+    "archivo": "sistema-linfatico.html",
+    "titulo": "SISTEMA LINFÀTICO",
+    "autor": "WIKIPEDIA",
+    "categoria": "CIENCIA",
+    "imagen": "/home/a/mi-blog-universitario/img/SISTEMA.jpg",
+    "resumen": "El sistema linfático es la estructura anatómica que transporta la linfa. Guarda algunas similitudes con el aparato circulatorio, pero el líquido que se transporta no es sangre, sino linfa. No es un si",
+    "contenido": "El sistema linfático es la estructura anatómica que transporta la linfa. Guarda algunas similitudes con el aparato circulatorio, pero el líquido que se transporta no es sangre, sino linfa. No es un sistema cerrado, se inicia en los tejidos corporales, continúa por los vasos linfáticos que aumentan de tamaño progresivamente hasta converger en el conducto torácico o en el conducto linfático derecho, ambos desembocan en el sistema venoso en el punto de unión entre la vena subclavia y la vena yugular interna, cada uno en un lado. El sistema linfático constituye la segunda red de transporte de líquidos corporales, algunos autores lo consideran como una parte del aparato circulatorio. La linfa es un líquido de aspecto transparente y color blanquecino que recorre los vasos linfáticos y generalmente carece de pigmentos, se produce a partir del exceso de líquido que sale de los capilares sanguíneos al espacio intersticial y es recogido y transportado por los capilares linfáticos que drenan a vasos linfáticos más gruesos.",
+    "fecha": "2026-07-25",
+    "tags": "SISTEMA, LINFÀTICO",
+    "etiquetas": [
+      "SISTEMA",
+      "LINFÀTICO"
+    ]
+  },
+  {
+    "archivo": "camino-barrancas-neuquen.html",
+    "titulo": "🏔️ El camino hacia las Barrancas: Geografía de la Puna Neuquina",
+    "resumen": "Un vistazo geográfico al paisaje árido y volcánico del camino de tierra hacia las Barrancas de Neuquén, con foto propia del recorrido.",
+    "fecha": "2026-08-25",
+    "etiquetas": [
+      "geografía",
+      "neuquén",
+      "patagonia",
+      "naturaleza",
+      "viajes"
+    ],
+    "slug": "camino-barrancas-neuquen",
+    "autor": "",
+    "categoria": "",
+    "imagen": "../img/camino-barrancas-neuquen.jpg",
+    "contenido": "Un vistazo geográfico al paisaje árido y volcánico del camino de tierra hacia las Barrancas de Neuquén, con foto propia del recorrido.",
+    "tags": "geografía, neuquén, patagonia, naturaleza, viajes"
+  }
 ]
