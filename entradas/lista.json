@@ -16,6 +16,19 @@
         "tags": "estudio, productividad"
     },
     {
+        "archivo": "capacitores.html",
+        "titulo": "Capacitores: carga, energía y circuitos RC",
+        "resumen": "Capacitancia, energía almacenada y circuitos RC de carga/descarga.",
+        "fecha": "2026-09-04",
+        "etiquetas": ["biofísica", "electricidad"],
+        "slug": "capacitores",
+        "autor": "Arnaldo",
+        "categoria": "biofísica",
+        "imagen": "",
+        "contenido": "",
+        "tags": ["capacitores", "circuitos"]
+    },
+    {
         "archivo": "barrancas-neuquen.html",
         "titulo": "🏜 Barrancas,  Neuquén: Un Paraíso Natural en la Patagonia",
         "resumen": "Guía completa para visitar  Barrancas Neuquén: cómo llegar, qué ver, mejor época y consejos para esta joya poco conocida de la Patagonia.",
